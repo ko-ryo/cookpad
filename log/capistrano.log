@@ -1,0 +1,36 @@
+# Logfile created on 2017-05-10 20:20:53 +0900 by logger.rb/54362
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:20:53 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [966a1c91] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [966a1c91] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:21:51 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [8deb5934] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [8deb5934] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:25:31 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e341e528] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [e341e528] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:26:34 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [0c21daef] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [0c21daef] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:28:49 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [193f8ccd] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [193f8ccd] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:32:59 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [3d6f5292] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [3d6f5292] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:40:20 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [e7111ebd] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [e7111ebd] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]

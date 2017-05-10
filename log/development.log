@@ -557,3 +557,10 @@ Processing by RecipesController#index as HTML
 Completed 200 OK in 603ms (Views: 590.5ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2017-05-10 17:54:52 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  Rendered recipes/index.html.haml within layouts/application (8.2ms)
+Completed 200 OK in 264ms (Views: 253.1ms | ActiveRecord: 0.0ms)
+
+

@@ -23,3 +23,5 @@ test:
 production:
   <<: *default
   database: cookpad_production
+  username: root
+  password: <%= ENV['DATABASE_PASSWORD'] %>

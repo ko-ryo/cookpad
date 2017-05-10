@@ -34,3 +34,25 @@
   INFO ---------------------------------------------------------------------------
  DEBUG [e7111ebd] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
  DEBUG [e7111ebd] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 20:44:26 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [f24a8940] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [f24a8940] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [f24a8940] Finished in 0.677 seconds with exit status 0 (successful).
+  INFO [784938c0] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.196.181.96
+ DEBUG [784938c0] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [784938c0] Finished in 0.074 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 100.0%
+  INFO [858852ad] Running /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh as ec2-user@52.196.181.96
+ DEBUG [858852ad] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh )
+  INFO [858852ad] Finished in 0.081 seconds with exit status 0 (successful).
+  INFO [da3b55ec] Running /usr/bin/env git ls-remote git@github.com:cookpad.git HEAD as ec2-user@52.196.181.96
+ DEBUG [da3b55ec] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git ls-remote git@github.com:cookpad.git HEAD )
+ DEBUG [da3b55ec] 	Warning: Permanently added the RSA host key for IP address '192.30.255.113' to the list of known hosts.
+ DEBUG [da3b55ec] 	ERROR: Repository not found.
+ DEBUG [da3b55ec] 	fatal: Could not read from remote repository.
+
+Please make sure you have the correct access rights
+and the repository exists.

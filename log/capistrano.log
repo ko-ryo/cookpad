@@ -794,3 +794,1166 @@ Results logged to
 An error occurred while installing nokogiri (1.7.2), and Bundler cannot
 continue.
 Make sure that `gem install nokogiri -v '1.7.2'` succeeds before bundling.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 21:00:39 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [ec55ceeb] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [ec55ceeb] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [ec55ceeb] Finished in 0.561 seconds with exit status 0 (successful).
+  INFO [8a7b3a67] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.196.181.96
+ DEBUG [8a7b3a67] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [8a7b3a67] Finished in 0.082 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 100.0%
+  INFO [864cdfd9] Running /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh as ec2-user@52.196.181.96
+ DEBUG [864cdfd9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh )
+  INFO [864cdfd9] Finished in 0.080 seconds with exit status 0 (successful).
+  INFO [97779b79] Running /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD as ec2-user@52.196.181.96
+ DEBUG [97779b79] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD )
+ DEBUG [97779b79] 	b68819398a7835ad3e763efafd58b45b5f41df20	HEAD
+  INFO [97779b79] Finished in 1.573 seconds with exit status 0 (successful).
+  INFO [85c7cc1a] Running /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases as ec2-user@52.196.181.96
+ DEBUG [85c7cc1a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases )
+  INFO [85c7cc1a] Finished in 0.095 seconds with exit status 0 (successful).
+  INFO [eb41a4e9] Running /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets as ec2-user@52.196.181.96
+ DEBUG [eb41a4e9] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets )
+  INFO [eb41a4e9] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [2dbfd898] Running [ -f /var/www/cookpad/current/REVISION ] as ec2-user@52.196.181.96
+ DEBUG [2dbfd898] Command: [ -f /var/www/cookpad/current/REVISION ]
+ DEBUG [2dbfd898] Finished in 0.095 seconds with exit status 1 (failed).
+ DEBUG [fd59d52a] Running [ -f /var/www/cookpad/repo/HEAD ] as ec2-user@52.196.181.96
+ DEBUG [fd59d52a] Command: [ -f /var/www/cookpad/repo/HEAD ]
+ DEBUG [fd59d52a] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cookpad/repo
+ DEBUG [f820d8c2] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [f820d8c2] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [f820d8c2] Finished in 0.143 seconds with exit status 0 (successful).
+  INFO [c6c319b6] Running /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git as ec2-user@52.196.181.96
+ DEBUG [c6c319b6] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git )
+  INFO [c6c319b6] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [168f58a9] Running /usr/bin/env git remote update --prune as ec2-user@52.196.181.96
+ DEBUG [168f58a9] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [168f58a9] 	Fetching origin
+ DEBUG [168f58a9] 	From github.com:ko-ryo/cookpad
+   db76cca..b688193  master     -> master
+  INFO [168f58a9] Finished in 1.873 seconds with exit status 0 (successful).
+ DEBUG [ce685d63] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [ce685d63] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [ce685d63] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [75cc9c7d] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510120042 as ec2-user@52.196.181.96
+ DEBUG [75cc9c7d] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510120042 )
+  INFO [75cc9c7d] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [1367bf3d] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510120042 as ec2-user@52.196.181.96
+ DEBUG [1367bf3d] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510120042 )
+  INFO [1367bf3d] Finished in 0.148 seconds with exit status 0 (successful).
+ DEBUG [efb5630e] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [efb5630e] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [efb5630e] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [3c46a06e] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.196.181.96
+ DEBUG [3c46a06e] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [3c46a06e] 	b68819398a7835ad3e763efafd58b45b5f41df20
+ DEBUG [3c46a06e] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [6a282187] Running if test ! -d /var/www/cookpad/releases/20170510120042; then echo "Directory does not exist '/var/www/cookpad/releases/20170510120042'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [6a282187] Command: if test ! -d /var/www/cookpad/releases/20170510120042; then echo "Directory does not exist '/var/www/cookpad/releases/20170510120042'" 1>&2; false; fi
+ DEBUG [6a282187] Finished in 0.127 seconds with exit status 0 (successful).
+  INFO [42c3e137] Running /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION as ec2-user@52.196.181.96
+ DEBUG [42c3e137] Command: cd /var/www/cookpad/releases/20170510120042 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION )
+  INFO [42c3e137] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [e8fb613e] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510120042 /var/www/cookpad/releases/20170510120042/tmp /var/www/cookpad/releases/20170510120042/vendor /var/www/cookpad/releases/20170510120042/public as ec2-user@52.196.181.96
+ DEBUG [e8fb613e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510120042 /var/www/cookpad/releases/20170510120042/tmp /var/www/cookpad/releases/20170510120042/vendor /var/www/cookpad/releases/20170510120042/public )
+  INFO [e8fb613e] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [8229b278] Running [ -L /var/www/cookpad/releases/20170510120042/log ] as ec2-user@52.196.181.96
+ DEBUG [8229b278] Command: [ -L /var/www/cookpad/releases/20170510120042/log ]
+ DEBUG [8229b278] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [bb917d10] Running [ -d /var/www/cookpad/releases/20170510120042/log ] as ec2-user@52.196.181.96
+ DEBUG [bb917d10] Command: [ -d /var/www/cookpad/releases/20170510120042/log ]
+ DEBUG [bb917d10] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [09cf334e] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510120042/log as ec2-user@52.196.181.96
+ DEBUG [09cf334e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510120042/log )
+  INFO [09cf334e] Finished in 0.257 seconds with exit status 0 (successful).
+  INFO [2a19e499] Running /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510120042/log as ec2-user@52.196.181.96
+ DEBUG [2a19e499] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510120042/log )
+  INFO [2a19e499] Finished in 0.144 seconds with exit status 0 (successful).
+ DEBUG [7badcec5] Running [ -L /var/www/cookpad/releases/20170510120042/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [7badcec5] Command: [ -L /var/www/cookpad/releases/20170510120042/tmp/pids ]
+ DEBUG [7badcec5] Finished in 0.134 seconds with exit status 1 (failed).
+ DEBUG [d8d8a729] Running [ -d /var/www/cookpad/releases/20170510120042/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [d8d8a729] Command: [ -d /var/www/cookpad/releases/20170510120042/tmp/pids ]
+ DEBUG [d8d8a729] Finished in 0.135 seconds with exit status 1 (failed).
+  INFO [6ee76772] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510120042/tmp/pids as ec2-user@52.196.181.96
+ DEBUG [6ee76772] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510120042/tmp/pids )
+  INFO [6ee76772] Finished in 0.128 seconds with exit status 0 (successful).
+ DEBUG [96b9b501] Running [ -L /var/www/cookpad/releases/20170510120042/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [96b9b501] Command: [ -L /var/www/cookpad/releases/20170510120042/tmp/cache ]
+ DEBUG [96b9b501] Finished in 0.136 seconds with exit status 1 (failed).
+ DEBUG [698f0971] Running [ -d /var/www/cookpad/releases/20170510120042/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [698f0971] Command: [ -d /var/www/cookpad/releases/20170510120042/tmp/cache ]
+ DEBUG [698f0971] Finished in 0.121 seconds with exit status 0 (successful).
+  INFO [8e4ef6aa] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510120042/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [8e4ef6aa] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510120042/tmp/cache )
+  INFO [8e4ef6aa] Finished in 0.140 seconds with exit status 0 (successful).
+  INFO [b6ef68be] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510120042/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [b6ef68be] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510120042/tmp/cache )
+  INFO [b6ef68be] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [2761552f] Running [ -L /var/www/cookpad/releases/20170510120042/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [2761552f] Command: [ -L /var/www/cookpad/releases/20170510120042/tmp/sockets ]
+ DEBUG [2761552f] Finished in 0.472 seconds with exit status 1 (failed).
+ DEBUG [18d93f33] Running [ -d /var/www/cookpad/releases/20170510120042/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [18d93f33] Command: [ -d /var/www/cookpad/releases/20170510120042/tmp/sockets ]
+ DEBUG [18d93f33] Finished in 0.114 seconds with exit status 1 (failed).
+  INFO [f253a6d8] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510120042/tmp/sockets as ec2-user@52.196.181.96
+ DEBUG [f253a6d8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510120042/tmp/sockets )
+  INFO [f253a6d8] Finished in 0.121 seconds with exit status 0 (successful).
+ DEBUG [09b0b457] Running [ -L /var/www/cookpad/releases/20170510120042/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [09b0b457] Command: [ -L /var/www/cookpad/releases/20170510120042/vendor/bundle ]
+ DEBUG [09b0b457] Finished in 0.136 seconds with exit status 1 (failed).
+ DEBUG [32f5c39a] Running [ -d /var/www/cookpad/releases/20170510120042/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [32f5c39a] Command: [ -d /var/www/cookpad/releases/20170510120042/vendor/bundle ]
+ DEBUG [32f5c39a] Finished in 0.121 seconds with exit status 1 (failed).
+  INFO [fc8b906c] Running /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510120042/vendor/bundle as ec2-user@52.196.181.96
+ DEBUG [fc8b906c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510120042/vendor/bundle )
+  INFO [fc8b906c] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [3f0bfe8a] Running [ -L /var/www/cookpad/releases/20170510120042/public/system ] as ec2-user@52.196.181.96
+ DEBUG [3f0bfe8a] Command: [ -L /var/www/cookpad/releases/20170510120042/public/system ]
+ DEBUG [3f0bfe8a] Finished in 0.136 seconds with exit status 1 (failed).
+ DEBUG [6cf00fd8] Running [ -d /var/www/cookpad/releases/20170510120042/public/system ] as ec2-user@52.196.181.96
+ DEBUG [6cf00fd8] Command: [ -d /var/www/cookpad/releases/20170510120042/public/system ]
+ DEBUG [6cf00fd8] Finished in 0.112 seconds with exit status 1 (failed).
+  INFO [2fa0c67a] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510120042/public/system as ec2-user@52.196.181.96
+ DEBUG [2fa0c67a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510120042/public/system )
+  INFO [2fa0c67a] Finished in 0.101 seconds with exit status 0 (successful).
+ DEBUG [bfb94bac] Running [ -L /var/www/cookpad/releases/20170510120042/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [bfb94bac] Command: [ -L /var/www/cookpad/releases/20170510120042/public/uploads ]
+ DEBUG [bfb94bac] Finished in 0.120 seconds with exit status 1 (failed).
+ DEBUG [f4b536c9] Running [ -d /var/www/cookpad/releases/20170510120042/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [f4b536c9] Command: [ -d /var/www/cookpad/releases/20170510120042/public/uploads ]
+ DEBUG [f4b536c9] Finished in 0.101 seconds with exit status 1 (failed).
+  INFO [2eb2e469] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510120042/public/uploads as ec2-user@52.196.181.96
+ DEBUG [2eb2e469] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510120042/public/uploads )
+  INFO [2eb2e469] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [9de7936a] Running [ -L /var/www/cookpad/releases/20170510120042/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [9de7936a] Command: [ -L /var/www/cookpad/releases/20170510120042/public/assets ]
+ DEBUG [9de7936a] Finished in 0.084 seconds with exit status 1 (failed).
+ DEBUG [31deefb5] Running [ -d /var/www/cookpad/releases/20170510120042/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [31deefb5] Command: [ -d /var/www/cookpad/releases/20170510120042/public/assets ]
+ DEBUG [31deefb5] Finished in 0.088 seconds with exit status 1 (failed).
+  INFO [feb17f40] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510120042/public/assets as ec2-user@52.196.181.96
+ DEBUG [feb17f40] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510120042/public/assets )
+  INFO [feb17f40] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [3dfa1418] Running if test ! -d /var/www/cookpad/releases/20170510120042; then echo "Directory does not exist '/var/www/cookpad/releases/20170510120042'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [3dfa1418] Command: if test ! -d /var/www/cookpad/releases/20170510120042; then echo "Directory does not exist '/var/www/cookpad/releases/20170510120042'" 1>&2; false; fi
+ DEBUG [3dfa1418] Finished in 0.099 seconds with exit status 0 (successful).
+ DEBUG [789b2369] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle as ec2-user@52.196.181.96
+ DEBUG [789b2369] Command: cd /var/www/cookpad/releases/20170510120042 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle )
+ DEBUG [789b2369] 	The following gems are missing
+ DEBUG [789b2369] 	 * nokogiri (1.7.2)
+ DEBUG [789b2369] 	 * rails-dom-testing (2.0.2)
+ DEBUG [789b2369] 	 * loofah (2.0.3)
+ DEBUG [789b2369] 	 * rails-html-sanitizer (1.0.3)
+ DEBUG [789b2369] 	 * actionview (5.0.2)
+ DEBUG [789b2369] 	 * actionpack (5.0.2)
+ DEBUG [789b2369] 	 * actioncable (5.0.2)
+ DEBUG [789b2369] 	 * globalid (0.4.0)
+ DEBUG [789b2369] 	 * activejob (5.0.2)
+ DEBUG [789b2369] 	 * mail (2.6.5)
+ DEBUG [789b2369] 	 * actionmailer (5.0.2)
+ DEBUG [789b2369] 	 * activemodel (5.0.2)
+ DEBUG [789b2369] 	 * activerecord (5.0.2)
+ DEBUG [789b2369] 	 * net-ssh (4.1.0)
+ DEBUG [789b2369] 	 * net-scp (1.2.1)
+ DEBUG [789b2369] 	 * sshkit (1.13.1)
+ DEBUG [789b2369] 	 * airbrussh (1.2.0)
+ DEBUG [789b2369] 	 * bindex (0.5.0)
+ DEBUG [789b2369] 	 * byebug (9.0.6)
+ DEBUG [789b2369] 	 * capistrano (3.8.1)
+ DEBUG [789b2369] 	 * capistrano-bundler (1.2.0)
+ DEBUG [789b2369] 	 * capistrano-rails (1.2.3)
+ DEBUG [789b2369] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [789b2369] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [789b2369] 	 * railties (5.0.2)
+ DEBUG [789b2369] 	 * coffee-rails (4.1.1)
+ DEBUG [789b2369] 	 * ffi (1.9.18)
+ DEBUG [789b2369] 	 * html2haml (2.2.0)
+ DEBUG [789b2369] 	 * haml-rails (1.0.0)
+ DEBUG [789b2369] 	 * jbuilder (2.6.3)
+ DEBUG [789b2369] 	 * jquery-rails (4.3.1)
+ DEBUG [789b2369] 	 * rb-fsevent (0.9.8)
+ DEBUG [789b2369] 	 * rb-inotify (0.9.8)
+ DEBUG [789b2369] 	 * listen (3.0.8)
+ DEBUG [789b2369] 	 * sprockets-rails (3.2.0)
+ DEBUG [789b2369] 	 * rails (5.0.2)
+ DEBUG [789b2369] 	 * sass-rails (5.0.6)
+ DEBUG [789b2369] 	 * spring (2.0.1)
+ DEBUG [789b2369] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [789b2369] 	 * web-console (3.5.0)
+ DEBUG [789b2369] 	Install missing gems with `bundle install`
+ DEBUG [789b2369] Finished in 0.580 seconds with exit status 1 (failed).
+  INFO [493dc65f] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet as ec2-user@52.196.181.96
+ DEBUG [493dc65f] Command: cd /var/www/cookpad/releases/20170510120042 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet )
+ DEBUG [493dc65f] 	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri
+/home/ec2-user/.rbenv/versions/2.3.1/bin/ruby -r
+./siteconf20170510-4493-1b4q1vz.rb extconf.rb
+checking if the C compiler accepts ... yes
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.1.0
+checking for gzdopen() in -lz... yes
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.4
+with the following patches applied:
+	- 0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch
+	- 0002-Fix-XPointer-paths-beginning-with-range-to.patch
+	- 0003-Disallow-namespace-nodes-in-XPointer-ranges.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.4.tar.gz into
+tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4... OK
+Running git apply with
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/patches/libxml2/0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch...
+OK
+Running git apply with
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/patches/libxml2/0002-Fix-XPointer-paths-beginning-with-range-to.patch...
+OK
+Running git apply with
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/patches/libxml2/0003-Disallow-namespace-nodes-in-XPointer-ranges.patch...
+OK
+Running 'configure' for libxml2 2.9.4... OK
+Running 'compile' for libxml2 2.9.4... ERROR, review
+'/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/compile.log'
+to see what happened. Last lines are:
+========================================================================
+static void des_xmlSchematronParserCtxtPtr(int no ATTRIBUTE_UNUSED,
+xmlSchematronParserCtxtPtr val ATTRIBUTE_UNUSED, int nr ATTRIBUTE_UNUSED) {
+             ^
+testapi.c:18558:18: warning: ‘gen_const_xmlBufPtr’ defined but not used
+[-Wunused-function]
+static xmlBufPtr gen_const_xmlBufPtr(int no ATTRIBUTE_UNUSED, int nr
+ATTRIBUTE_UNUSED) {
+                  ^
+testapi.c:18561:13: warning: ‘des_const_xmlBufPtr’ defined but not used
+[-Wunused-function]
+static void des_const_xmlBufPtr(int no ATTRIBUTE_UNUSED, const xmlBufPtr val
+ATTRIBUTE_UNUSED, int nr ATTRIBUTE_UNUSED) {
+             ^
+testapi.c:34503:27: warning: ‘gen_xmlSAXHandlerPtr_ptr’ defined but not used
+[-Wunused-function]
+static xmlSAXHandlerPtr * gen_xmlSAXHandlerPtr_ptr(int no ATTRIBUTE_UNUSED, int
+nr ATTRIBUTE_UNUSED) {
+                           ^
+testapi.c:34506:13: warning: ‘des_xmlSAXHandlerPtr_ptr’ defined but not used
+[-Wunused-function]
+static void des_xmlSAXHandlerPtr_ptr(int no ATTRIBUTE_UNUSED, xmlSAXHandlerPtr
+* val ATTRIBUTE_UNUSED, int nr ATTRIBUTE_UNUSED) {
+             ^
+virtual memory exhausted: Cannot allocate memory
+make[2]: *** [testapi.o] Error 1
+make[2]: Leaving directory
+`/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory
+`/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4'
+make: *** [all] Error 2
+========================================================================
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/ec2-user/.rbenv/versions/2.3.1/bin/$(RUBY_BASE_NAME)
+	--help
+	--clean
+	--use-system-libraries
+	--enable-static
+	--disable-static
+	--with-zlib-dir
+	--without-zlib-dir
+	--with-zlib-include
+	--without-zlib-include=${zlib-dir}/include
+	--with-zlib-lib
+	--without-zlib-lib=${zlib-dir}/lib
+	--enable-cross-build
+	--disable-cross-build
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:366:in
+`block in execute': Failed to complete compile task (RuntimeError)
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:337:in
+`chdir'
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:337:in
+`execute'
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:111:in
+`compile'
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:150:in
+`cook'
+	from extconf.rb:364:in `block (2 levels) in process_recipe'
+	from extconf.rb:257:in `block in chdir_for_build'
+	from extconf.rb:256:in `chdir'
+	from extconf.rb:256:in `chdir_for_build'
+	from extconf.rb:363:in `block in process_recipe'
+	from extconf.rb:262:in `tap'
+	from extconf.rb:262:in `process_recipe'
+	from extconf.rb:547:in `<main>'
+
+To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+/var/www/cookpad/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/nokogiri-1.7.2/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2 for inspection.
+Results logged to
+/var/www/cookpad/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/nokogiri-1.7.2/gem_make.out
+
+An error occurred while installing nokogiri (1.7.2), and Bundler cannot
+continue.
+Make sure that `gem install nokogiri -v '1.7.2'` succeeds before bundling.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 21:14:46 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [31ec6ef5] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [31ec6ef5] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [31ec6ef5] Finished in 0.910 seconds with exit status 0 (successful).
+  INFO [cd6aa9de] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.196.181.96
+ DEBUG [cd6aa9de] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [cd6aa9de] Finished in 0.417 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 100.0%
+  INFO [68a155d7] Running /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh as ec2-user@52.196.181.96
+ DEBUG [68a155d7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh )
+  INFO [68a155d7] Finished in 0.153 seconds with exit status 0 (successful).
+  INFO [46ed8be5] Running /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD as ec2-user@52.196.181.96
+ DEBUG [46ed8be5] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD )
+ DEBUG [46ed8be5] 	b68819398a7835ad3e763efafd58b45b5f41df20	HEAD
+  INFO [46ed8be5] Finished in 1.896 seconds with exit status 0 (successful).
+  INFO [e3362fd7] Running /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases as ec2-user@52.196.181.96
+ DEBUG [e3362fd7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases )
+  INFO [e3362fd7] Finished in 0.507 seconds with exit status 0 (successful).
+  INFO [2f18a65a] Running /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets as ec2-user@52.196.181.96
+ DEBUG [2f18a65a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets )
+  INFO [2f18a65a] Finished in 0.178 seconds with exit status 0 (successful).
+ DEBUG [0f26c0f2] Running [ -f /var/www/cookpad/current/REVISION ] as ec2-user@52.196.181.96
+ DEBUG [0f26c0f2] Command: [ -f /var/www/cookpad/current/REVISION ]
+ DEBUG [0f26c0f2] Finished in 0.180 seconds with exit status 1 (failed).
+ DEBUG [de49a680] Running [ -f /var/www/cookpad/repo/HEAD ] as ec2-user@52.196.181.96
+ DEBUG [de49a680] Command: [ -f /var/www/cookpad/repo/HEAD ]
+ DEBUG [de49a680] Finished in 0.120 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cookpad/repo
+ DEBUG [feee8274] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [feee8274] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [feee8274] Finished in 0.126 seconds with exit status 0 (successful).
+  INFO [b8e4939a] Running /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git as ec2-user@52.196.181.96
+ DEBUG [b8e4939a] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git )
+  INFO [b8e4939a] Finished in 0.171 seconds with exit status 0 (successful).
+  INFO [e89ace68] Running /usr/bin/env git remote update --prune as ec2-user@52.196.181.96
+ DEBUG [e89ace68] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e89ace68] 	Fetching origin
+  INFO [e89ace68] Finished in 1.788 seconds with exit status 0 (successful).
+ DEBUG [ccd0dc53] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [ccd0dc53] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [ccd0dc53] Finished in 0.157 seconds with exit status 0 (successful).
+  INFO [12c4c301] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121450 as ec2-user@52.196.181.96
+ DEBUG [12c4c301] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121450 )
+  INFO [12c4c301] Finished in 0.223 seconds with exit status 0 (successful).
+  INFO [289a2ec9] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510121450 as ec2-user@52.196.181.96
+ DEBUG [289a2ec9] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510121450 )
+  INFO [289a2ec9] Finished in 0.199 seconds with exit status 0 (successful).
+ DEBUG [745ec6f2] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [745ec6f2] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [745ec6f2] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [e243d33a] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.196.181.96
+ DEBUG [e243d33a] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [e243d33a] 	b68819398a7835ad3e763efafd58b45b5f41df20
+ DEBUG [e243d33a] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [9456463a] Running if test ! -d /var/www/cookpad/releases/20170510121450; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121450'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [9456463a] Command: if test ! -d /var/www/cookpad/releases/20170510121450; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121450'" 1>&2; false; fi
+ DEBUG [9456463a] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [177a30f2] Running /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION as ec2-user@52.196.181.96
+ DEBUG [177a30f2] Command: cd /var/www/cookpad/releases/20170510121450 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION )
+  INFO [177a30f2] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [eb286a24] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121450 /var/www/cookpad/releases/20170510121450/tmp /var/www/cookpad/releases/20170510121450/vendor /var/www/cookpad/releases/20170510121450/public as ec2-user@52.196.181.96
+ DEBUG [eb286a24] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121450 /var/www/cookpad/releases/20170510121450/tmp /var/www/cookpad/releases/20170510121450/vendor /var/www/cookpad/releases/20170510121450/public )
+  INFO [eb286a24] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [0f4177f1] Running [ -L /var/www/cookpad/releases/20170510121450/log ] as ec2-user@52.196.181.96
+ DEBUG [0f4177f1] Command: [ -L /var/www/cookpad/releases/20170510121450/log ]
+ DEBUG [0f4177f1] Finished in 0.103 seconds with exit status 1 (failed).
+ DEBUG [eee535b7] Running [ -d /var/www/cookpad/releases/20170510121450/log ] as ec2-user@52.196.181.96
+ DEBUG [eee535b7] Command: [ -d /var/www/cookpad/releases/20170510121450/log ]
+ DEBUG [eee535b7] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [3e15c2d1] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121450/log as ec2-user@52.196.181.96
+ DEBUG [3e15c2d1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121450/log )
+  INFO [3e15c2d1] Finished in 0.138 seconds with exit status 0 (successful).
+  INFO [66afcaa3] Running /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510121450/log as ec2-user@52.196.181.96
+ DEBUG [66afcaa3] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510121450/log )
+  INFO [66afcaa3] Finished in 0.151 seconds with exit status 0 (successful).
+ DEBUG [1bd06b17] Running [ -L /var/www/cookpad/releases/20170510121450/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [1bd06b17] Command: [ -L /var/www/cookpad/releases/20170510121450/tmp/pids ]
+ DEBUG [1bd06b17] Finished in 0.155 seconds with exit status 1 (failed).
+ DEBUG [5948797f] Running [ -d /var/www/cookpad/releases/20170510121450/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [5948797f] Command: [ -d /var/www/cookpad/releases/20170510121450/tmp/pids ]
+ DEBUG [5948797f] Finished in 0.125 seconds with exit status 1 (failed).
+  INFO [591ded70] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510121450/tmp/pids as ec2-user@52.196.181.96
+ DEBUG [591ded70] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510121450/tmp/pids )
+  INFO [591ded70] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [e811ebc0] Running [ -L /var/www/cookpad/releases/20170510121450/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [e811ebc0] Command: [ -L /var/www/cookpad/releases/20170510121450/tmp/cache ]
+ DEBUG [e811ebc0] Finished in 0.143 seconds with exit status 1 (failed).
+ DEBUG [ab23da94] Running [ -d /var/www/cookpad/releases/20170510121450/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [ab23da94] Command: [ -d /var/www/cookpad/releases/20170510121450/tmp/cache ]
+ DEBUG [ab23da94] Finished in 0.151 seconds with exit status 0 (successful).
+  INFO [039fad6b] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121450/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [039fad6b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121450/tmp/cache )
+  INFO [039fad6b] Finished in 0.134 seconds with exit status 0 (successful).
+  INFO [fdde7a80] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510121450/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [fdde7a80] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510121450/tmp/cache )
+  INFO [fdde7a80] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [62cc4882] Running [ -L /var/www/cookpad/releases/20170510121450/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [62cc4882] Command: [ -L /var/www/cookpad/releases/20170510121450/tmp/sockets ]
+ DEBUG [62cc4882] Finished in 0.121 seconds with exit status 1 (failed).
+ DEBUG [f149358d] Running [ -d /var/www/cookpad/releases/20170510121450/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [f149358d] Command: [ -d /var/www/cookpad/releases/20170510121450/tmp/sockets ]
+ DEBUG [f149358d] Finished in 0.105 seconds with exit status 1 (failed).
+  INFO [77d990bc] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510121450/tmp/sockets as ec2-user@52.196.181.96
+ DEBUG [77d990bc] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510121450/tmp/sockets )
+  INFO [77d990bc] Finished in 0.107 seconds with exit status 0 (successful).
+ DEBUG [acd6c367] Running [ -L /var/www/cookpad/releases/20170510121450/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [acd6c367] Command: [ -L /var/www/cookpad/releases/20170510121450/vendor/bundle ]
+ DEBUG [acd6c367] Finished in 0.109 seconds with exit status 1 (failed).
+ DEBUG [fa365d81] Running [ -d /var/www/cookpad/releases/20170510121450/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [fa365d81] Command: [ -d /var/www/cookpad/releases/20170510121450/vendor/bundle ]
+ DEBUG [fa365d81] Finished in 0.108 seconds with exit status 1 (failed).
+  INFO [761667c7] Running /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510121450/vendor/bundle as ec2-user@52.196.181.96
+ DEBUG [761667c7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510121450/vendor/bundle )
+  INFO [761667c7] Finished in 0.093 seconds with exit status 0 (successful).
+ DEBUG [181fb35e] Running [ -L /var/www/cookpad/releases/20170510121450/public/system ] as ec2-user@52.196.181.96
+ DEBUG [181fb35e] Command: [ -L /var/www/cookpad/releases/20170510121450/public/system ]
+ DEBUG [181fb35e] Finished in 0.096 seconds with exit status 1 (failed).
+ DEBUG [03ea5cc9] Running [ -d /var/www/cookpad/releases/20170510121450/public/system ] as ec2-user@52.196.181.96
+ DEBUG [03ea5cc9] Command: [ -d /var/www/cookpad/releases/20170510121450/public/system ]
+ DEBUG [03ea5cc9] Finished in 0.100 seconds with exit status 1 (failed).
+  INFO [d99d7458] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510121450/public/system as ec2-user@52.196.181.96
+ DEBUG [d99d7458] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510121450/public/system )
+  INFO [d99d7458] Finished in 0.102 seconds with exit status 0 (successful).
+ DEBUG [05fa90e6] Running [ -L /var/www/cookpad/releases/20170510121450/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [05fa90e6] Command: [ -L /var/www/cookpad/releases/20170510121450/public/uploads ]
+ DEBUG [05fa90e6] Finished in 0.094 seconds with exit status 1 (failed).
+ DEBUG [df62ae7a] Running [ -d /var/www/cookpad/releases/20170510121450/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [df62ae7a] Command: [ -d /var/www/cookpad/releases/20170510121450/public/uploads ]
+ DEBUG [df62ae7a] Finished in 0.082 seconds with exit status 1 (failed).
+  INFO [e5c02392] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510121450/public/uploads as ec2-user@52.196.181.96
+ DEBUG [e5c02392] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510121450/public/uploads )
+  INFO [e5c02392] Finished in 0.115 seconds with exit status 0 (successful).
+ DEBUG [00c5ccd0] Running [ -L /var/www/cookpad/releases/20170510121450/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [00c5ccd0] Command: [ -L /var/www/cookpad/releases/20170510121450/public/assets ]
+ DEBUG [00c5ccd0] Finished in 0.101 seconds with exit status 1 (failed).
+ DEBUG [da5aee3a] Running [ -d /var/www/cookpad/releases/20170510121450/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [da5aee3a] Command: [ -d /var/www/cookpad/releases/20170510121450/public/assets ]
+ DEBUG [da5aee3a] Finished in 0.187 seconds with exit status 1 (failed).
+  INFO [2928e238] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510121450/public/assets as ec2-user@52.196.181.96
+ DEBUG [2928e238] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510121450/public/assets )
+  INFO [2928e238] Finished in 0.137 seconds with exit status 0 (successful).
+ DEBUG [84a57603] Running if test ! -d /var/www/cookpad/releases/20170510121450; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121450'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [84a57603] Command: if test ! -d /var/www/cookpad/releases/20170510121450; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121450'" 1>&2; false; fi
+ DEBUG [84a57603] Finished in 0.150 seconds with exit status 0 (successful).
+ DEBUG [454176d1] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle as ec2-user@52.196.181.96
+ DEBUG [454176d1] Command: cd /var/www/cookpad/releases/20170510121450 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle )
+ DEBUG [454176d1] 	The following gems are missing
+ DEBUG [454176d1] 	 * nokogiri (1.7.2)
+ DEBUG [454176d1] 	 * rails-dom-testing (2.0.2)
+ DEBUG [454176d1] 	 * loofah (2.0.3)
+ DEBUG [454176d1] 	 * rails-html-sanitizer (1.0.3)
+ DEBUG [454176d1] 	 * actionview (5.0.2)
+ DEBUG [454176d1] 	 * actionpack (5.0.2)
+ DEBUG [454176d1] 	 * actioncable (5.0.2)
+ DEBUG [454176d1] 	 * globalid (0.4.0)
+ DEBUG [454176d1] 	 * activejob (5.0.2)
+ DEBUG [454176d1] 	 * mail (2.6.5)
+ DEBUG [454176d1] 	 * actionmailer (5.0.2)
+ DEBUG [454176d1] 	 * activemodel (5.0.2)
+ DEBUG [454176d1] 	 * activerecord (5.0.2)
+ DEBUG [454176d1] 	 * net-ssh (4.1.0)
+ DEBUG [454176d1] 	 * net-scp (1.2.1)
+ DEBUG [454176d1] 	 * sshkit (1.13.1)
+ DEBUG [454176d1] 	 * airbrussh (1.2.0)
+ DEBUG [454176d1] 	 * bindex (0.5.0)
+ DEBUG [454176d1] 	 * byebug (9.0.6)
+ DEBUG [454176d1] 	 * capistrano (3.8.1)
+ DEBUG [454176d1] 	 * capistrano-bundler (1.2.0)
+ DEBUG [454176d1] 	 * capistrano-rails (1.2.3)
+ DEBUG [454176d1] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [454176d1] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [454176d1] 	 * railties (5.0.2)
+ DEBUG [454176d1] 	 * coffee-rails (4.1.1)
+ DEBUG [454176d1] 	 * ffi (1.9.18)
+ DEBUG [454176d1] 	 * html2haml (2.2.0)
+ DEBUG [454176d1] 	 * haml-rails (1.0.0)
+ DEBUG [454176d1] 	 * jbuilder (2.6.3)
+ DEBUG [454176d1] 	 * jquery-rails (4.3.1)
+ DEBUG [454176d1] 	 * rb-fsevent (0.9.8)
+ DEBUG [454176d1] 	 * rb-inotify (0.9.8)
+ DEBUG [454176d1] 	 * listen (3.0.8)
+ DEBUG [454176d1] 	 * sprockets-rails (3.2.0)
+ DEBUG [454176d1] 	 * rails (5.0.2)
+ DEBUG [454176d1] 	 * sass-rails (5.0.6)
+ DEBUG [454176d1] 	 * spring (2.0.1)
+ DEBUG [454176d1] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [454176d1] 	 * web-console (3.5.0)
+ DEBUG [454176d1] 	Install missing gems with `bundle install`
+ DEBUG [454176d1] Finished in 0.524 seconds with exit status 1 (failed).
+  INFO [dd6bc59d] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet as ec2-user@52.196.181.96
+ DEBUG [dd6bc59d] Command: cd /var/www/cookpad/releases/20170510121450 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet )
+ DEBUG [dd6bc59d] 	Gem::Ext::BuildError: ERROR: Failed to build gem native extension.
+
+current directory:
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri
+/home/ec2-user/.rbenv/versions/2.3.1/bin/ruby -r
+./siteconf20170510-10585-wnq7f5.rb extconf.rb
+checking if the C compiler accepts ... yes
+Building nokogiri using packaged libraries.
+Using mini_portile version 2.1.0
+checking for gzdopen() in -lz... yes
+checking for iconv... yes
+************************************************************************
+IMPORTANT NOTICE:
+
+Building Nokogiri with a packaged version of libxml2-2.9.4
+with the following patches applied:
+	- 0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch
+	- 0002-Fix-XPointer-paths-beginning-with-range-to.patch
+	- 0003-Disallow-namespace-nodes-in-XPointer-ranges.patch
+
+Team Nokogiri will keep on doing their best to provide security
+updates in a timely manner, but if this is a concern for you and want
+to use the system library instead; abort this installation process and
+reinstall nokogiri as follows:
+
+    gem install nokogiri -- --use-system-libraries
+        [--with-xml2-config=/path/to/xml2-config]
+        [--with-xslt-config=/path/to/xslt-config]
+
+If you are using Bundler, tell it to use the option:
+
+    bundle config build.nokogiri --use-system-libraries
+    bundle install
+
+Note, however, that nokogiri is not fully compatible with arbitrary
+versions of libxml2 provided by OS/package vendors.
+************************************************************************
+Extracting libxml2-2.9.4.tar.gz into
+tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4... OK
+Running git apply with
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/patches/libxml2/0001-Fix-comparison-with-root-node-in-xmlXPathCmpNodes.patch...
+OK
+Running git apply with
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/patches/libxml2/0002-Fix-XPointer-paths-beginning-with-range-to.patch...
+OK
+Running git apply with
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/patches/libxml2/0003-Disallow-namespace-nodes-in-XPointer-ranges.patch...
+OK
+Running 'configure' for libxml2 2.9.4... OK
+Running 'compile' for libxml2 2.9.4... ERROR, review
+'/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/compile.log'
+to see what happened. Last lines are:
+========================================================================
+static void des_xmlSchematronParserCtxtPtr(int no ATTRIBUTE_UNUSED,
+xmlSchematronParserCtxtPtr val ATTRIBUTE_UNUSED, int nr ATTRIBUTE_UNUSED) {
+             ^
+testapi.c:18558:18: warning: ‘gen_const_xmlBufPtr’ defined but not used
+[-Wunused-function]
+static xmlBufPtr gen_const_xmlBufPtr(int no ATTRIBUTE_UNUSED, int nr
+ATTRIBUTE_UNUSED) {
+                  ^
+testapi.c:18561:13: warning: ‘des_const_xmlBufPtr’ defined but not used
+[-Wunused-function]
+static void des_const_xmlBufPtr(int no ATTRIBUTE_UNUSED, const xmlBufPtr val
+ATTRIBUTE_UNUSED, int nr ATTRIBUTE_UNUSED) {
+             ^
+testapi.c:34503:27: warning: ‘gen_xmlSAXHandlerPtr_ptr’ defined but not used
+[-Wunused-function]
+static xmlSAXHandlerPtr * gen_xmlSAXHandlerPtr_ptr(int no ATTRIBUTE_UNUSED, int
+nr ATTRIBUTE_UNUSED) {
+                           ^
+testapi.c:34506:13: warning: ‘des_xmlSAXHandlerPtr_ptr’ defined but not used
+[-Wunused-function]
+static void des_xmlSAXHandlerPtr_ptr(int no ATTRIBUTE_UNUSED, xmlSAXHandlerPtr
+* val ATTRIBUTE_UNUSED, int nr ATTRIBUTE_UNUSED) {
+             ^
+virtual memory exhausted: Cannot allocate memory
+make[2]: *** [testapi.o] Error 1
+make[2]: Leaving directory
+`/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4'
+make[1]: *** [all-recursive] Error 1
+make[1]: Leaving directory
+`/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2/ext/nokogiri/tmp/x86_64-pc-linux-gnu/ports/libxml2/2.9.4/libxml2-2.9.4'
+make: *** [all] Error 2
+========================================================================
+*** extconf.rb failed ***
+Could not create Makefile due to some reason, probably lack of necessary
+libraries and/or headers.  Check the mkmf.log file for more details.  You may
+need configuration options.
+
+Provided configuration options:
+	--with-opt-dir
+	--without-opt-dir
+	--with-opt-include
+	--without-opt-include=${opt-dir}/include
+	--with-opt-lib
+	--without-opt-lib=${opt-dir}/lib
+	--with-make-prog
+	--without-make-prog
+	--srcdir=.
+	--curdir
+	--ruby=/home/ec2-user/.rbenv/versions/2.3.1/bin/$(RUBY_BASE_NAME)
+	--help
+	--clean
+	--use-system-libraries
+	--enable-static
+	--disable-static
+	--with-zlib-dir
+	--without-zlib-dir
+	--with-zlib-include
+	--without-zlib-include=${zlib-dir}/include
+	--with-zlib-lib
+	--without-zlib-lib=${zlib-dir}/lib
+	--enable-cross-build
+	--disable-cross-build
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:366:in
+`block in execute': Failed to complete compile task (RuntimeError)
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:337:in
+`chdir'
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:337:in
+`execute'
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:111:in
+`compile'
+from
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/mini_portile2-2.1.0/lib/mini_portile2/mini_portile.rb:150:in
+`cook'
+	from extconf.rb:364:in `block (2 levels) in process_recipe'
+	from extconf.rb:257:in `block in chdir_for_build'
+	from extconf.rb:256:in `chdir'
+	from extconf.rb:256:in `chdir_for_build'
+	from extconf.rb:363:in `block in process_recipe'
+	from extconf.rb:262:in `tap'
+	from extconf.rb:262:in `process_recipe'
+	from extconf.rb:547:in `<main>'
+
+To see why this extension failed to compile, please check the mkmf.log which can
+be found here:
+
+/var/www/cookpad/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/nokogiri-1.7.2/mkmf.log
+
+extconf failed, exit code 1
+
+Gem files will remain installed in
+/var/www/cookpad/shared/bundle/ruby/2.3.0/gems/nokogiri-1.7.2 for inspection.
+Results logged to
+/var/www/cookpad/shared/bundle/ruby/2.3.0/extensions/x86_64-linux/2.3.0-static/nokogiri-1.7.2/gem_make.out
+
+An error occurred while installing nokogiri (1.7.2), and Bundler cannot
+continue.
+Make sure that `gem install nokogiri -v '1.7.2'` succeeds before bundling.
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 21:16:33 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [38a82dc6] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [38a82dc6] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [38a82dc6] Finished in 0.658 seconds with exit status 0 (successful).
+  INFO [2991c856] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.196.181.96
+ DEBUG [2991c856] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [2991c856] Finished in 0.067 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 100.0%
+  INFO [4b7ef50c] Running /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh as ec2-user@52.196.181.96
+ DEBUG [4b7ef50c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh )
+  INFO [4b7ef50c] Finished in 0.084 seconds with exit status 0 (successful).
+  INFO [0822be2a] Running /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD as ec2-user@52.196.181.96
+ DEBUG [0822be2a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD )
+ DEBUG [0822be2a] 	b68819398a7835ad3e763efafd58b45b5f41df20	HEAD
+  INFO [0822be2a] Finished in 1.670 seconds with exit status 0 (successful).
+  INFO [d42107a1] Running /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases as ec2-user@52.196.181.96
+ DEBUG [d42107a1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases )
+  INFO [d42107a1] Finished in 0.092 seconds with exit status 0 (successful).
+  INFO [b6b3e3b6] Running /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets as ec2-user@52.196.181.96
+ DEBUG [b6b3e3b6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets )
+  INFO [b6b3e3b6] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [fb4f5d48] Running [ -f /var/www/cookpad/current/REVISION ] as ec2-user@52.196.181.96
+ DEBUG [fb4f5d48] Command: [ -f /var/www/cookpad/current/REVISION ]
+ DEBUG [fb4f5d48] Finished in 0.090 seconds with exit status 1 (failed).
+ DEBUG [023c281f] Running [ -f /var/www/cookpad/repo/HEAD ] as ec2-user@52.196.181.96
+ DEBUG [023c281f] Command: [ -f /var/www/cookpad/repo/HEAD ]
+ DEBUG [023c281f] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cookpad/repo
+ DEBUG [d3b6be04] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [d3b6be04] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [d3b6be04] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [6033324c] Running /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git as ec2-user@52.196.181.96
+ DEBUG [6033324c] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git )
+  INFO [6033324c] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [010c18cc] Running /usr/bin/env git remote update --prune as ec2-user@52.196.181.96
+ DEBUG [010c18cc] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [010c18cc] 	Fetching origin
+  INFO [010c18cc] Finished in 1.785 seconds with exit status 0 (successful).
+ DEBUG [731d8915] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [731d8915] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [731d8915] Finished in 0.067 seconds with exit status 0 (successful).
+  INFO [bbec932c] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121636 as ec2-user@52.196.181.96
+ DEBUG [bbec932c] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121636 )
+  INFO [bbec932c] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [2d25b326] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510121636 as ec2-user@52.196.181.96
+ DEBUG [2d25b326] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510121636 )
+  INFO [2d25b326] Finished in 0.076 seconds with exit status 0 (successful).
+ DEBUG [44ce3680] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [44ce3680] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [44ce3680] Finished in 0.069 seconds with exit status 0 (successful).
+ DEBUG [1184a504] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.196.181.96
+ DEBUG [1184a504] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [1184a504] 	b68819398a7835ad3e763efafd58b45b5f41df20
+ DEBUG [1184a504] Finished in 0.072 seconds with exit status 0 (successful).
+ DEBUG [34bd44b6] Running if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [34bd44b6] Command: if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi
+ DEBUG [34bd44b6] Finished in 0.096 seconds with exit status 0 (successful).
+  INFO [4d71807a] Running /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION as ec2-user@52.196.181.96
+ DEBUG [4d71807a] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION )
+  INFO [4d71807a] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [1c2e2d3b] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121636 /var/www/cookpad/releases/20170510121636/tmp /var/www/cookpad/releases/20170510121636/vendor /var/www/cookpad/releases/20170510121636/public as ec2-user@52.196.181.96
+ DEBUG [1c2e2d3b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121636 /var/www/cookpad/releases/20170510121636/tmp /var/www/cookpad/releases/20170510121636/vendor /var/www/cookpad/releases/20170510121636/public )
+  INFO [1c2e2d3b] Finished in 0.103 seconds with exit status 0 (successful).
+ DEBUG [d7825236] Running [ -L /var/www/cookpad/releases/20170510121636/log ] as ec2-user@52.196.181.96
+ DEBUG [d7825236] Command: [ -L /var/www/cookpad/releases/20170510121636/log ]
+ DEBUG [d7825236] Finished in 0.092 seconds with exit status 1 (failed).
+ DEBUG [fad76e71] Running [ -d /var/www/cookpad/releases/20170510121636/log ] as ec2-user@52.196.181.96
+ DEBUG [fad76e71] Command: [ -d /var/www/cookpad/releases/20170510121636/log ]
+ DEBUG [fad76e71] Finished in 0.076 seconds with exit status 0 (successful).
+  INFO [c775cd15] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121636/log as ec2-user@52.196.181.96
+ DEBUG [c775cd15] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121636/log )
+  INFO [c775cd15] Finished in 0.071 seconds with exit status 0 (successful).
+  INFO [47fb6bc1] Running /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510121636/log as ec2-user@52.196.181.96
+ DEBUG [47fb6bc1] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510121636/log )
+  INFO [47fb6bc1] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [2c446eab] Running [ -L /var/www/cookpad/releases/20170510121636/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [2c446eab] Command: [ -L /var/www/cookpad/releases/20170510121636/tmp/pids ]
+ DEBUG [2c446eab] Finished in 0.093 seconds with exit status 1 (failed).
+ DEBUG [b86049b0] Running [ -d /var/www/cookpad/releases/20170510121636/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [b86049b0] Command: [ -d /var/www/cookpad/releases/20170510121636/tmp/pids ]
+ DEBUG [b86049b0] Finished in 0.063 seconds with exit status 1 (failed).
+  INFO [f9dfd7b6] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510121636/tmp/pids as ec2-user@52.196.181.96
+ DEBUG [f9dfd7b6] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510121636/tmp/pids )
+  INFO [f9dfd7b6] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [919b6334] Running [ -L /var/www/cookpad/releases/20170510121636/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [919b6334] Command: [ -L /var/www/cookpad/releases/20170510121636/tmp/cache ]
+ DEBUG [919b6334] Finished in 0.074 seconds with exit status 1 (failed).
+ DEBUG [b56de8c7] Running [ -d /var/www/cookpad/releases/20170510121636/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [b56de8c7] Command: [ -d /var/www/cookpad/releases/20170510121636/tmp/cache ]
+ DEBUG [b56de8c7] Finished in 0.063 seconds with exit status 0 (successful).
+  INFO [40f78307] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121636/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [40f78307] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510121636/tmp/cache )
+  INFO [40f78307] Finished in 0.066 seconds with exit status 0 (successful).
+  INFO [c23f8d85] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510121636/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [c23f8d85] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510121636/tmp/cache )
+  INFO [c23f8d85] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [db686a17] Running [ -L /var/www/cookpad/releases/20170510121636/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [db686a17] Command: [ -L /var/www/cookpad/releases/20170510121636/tmp/sockets ]
+ DEBUG [db686a17] Finished in 0.055 seconds with exit status 1 (failed).
+ DEBUG [07ab89ad] Running [ -d /var/www/cookpad/releases/20170510121636/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [07ab89ad] Command: [ -d /var/www/cookpad/releases/20170510121636/tmp/sockets ]
+ DEBUG [07ab89ad] Finished in 0.056 seconds with exit status 1 (failed).
+  INFO [ebe6328f] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510121636/tmp/sockets as ec2-user@52.196.181.96
+ DEBUG [ebe6328f] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510121636/tmp/sockets )
+  INFO [ebe6328f] Finished in 0.060 seconds with exit status 0 (successful).
+ DEBUG [d81d77cd] Running [ -L /var/www/cookpad/releases/20170510121636/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [d81d77cd] Command: [ -L /var/www/cookpad/releases/20170510121636/vendor/bundle ]
+ DEBUG [d81d77cd] Finished in 0.060 seconds with exit status 1 (failed).
+ DEBUG [8589e3b0] Running [ -d /var/www/cookpad/releases/20170510121636/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [8589e3b0] Command: [ -d /var/www/cookpad/releases/20170510121636/vendor/bundle ]
+ DEBUG [8589e3b0] Finished in 0.206 seconds with exit status 1 (failed).
+  INFO [a8108a0c] Running /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510121636/vendor/bundle as ec2-user@52.196.181.96
+ DEBUG [a8108a0c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510121636/vendor/bundle )
+  INFO [a8108a0c] Finished in 0.075 seconds with exit status 0 (successful).
+ DEBUG [796484e4] Running [ -L /var/www/cookpad/releases/20170510121636/public/system ] as ec2-user@52.196.181.96
+ DEBUG [796484e4] Command: [ -L /var/www/cookpad/releases/20170510121636/public/system ]
+ DEBUG [796484e4] Finished in 0.072 seconds with exit status 1 (failed).
+ DEBUG [02f599ed] Running [ -d /var/www/cookpad/releases/20170510121636/public/system ] as ec2-user@52.196.181.96
+ DEBUG [02f599ed] Command: [ -d /var/www/cookpad/releases/20170510121636/public/system ]
+ DEBUG [02f599ed] Finished in 0.069 seconds with exit status 1 (failed).
+  INFO [4acec29b] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510121636/public/system as ec2-user@52.196.181.96
+ DEBUG [4acec29b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510121636/public/system )
+  INFO [4acec29b] Finished in 0.058 seconds with exit status 0 (successful).
+ DEBUG [f9249088] Running [ -L /var/www/cookpad/releases/20170510121636/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [f9249088] Command: [ -L /var/www/cookpad/releases/20170510121636/public/uploads ]
+ DEBUG [f9249088] Finished in 0.055 seconds with exit status 1 (failed).
+ DEBUG [3653c89e] Running [ -d /var/www/cookpad/releases/20170510121636/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [3653c89e] Command: [ -d /var/www/cookpad/releases/20170510121636/public/uploads ]
+ DEBUG [3653c89e] Finished in 0.061 seconds with exit status 1 (failed).
+  INFO [6ae8f7ac] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510121636/public/uploads as ec2-user@52.196.181.96
+ DEBUG [6ae8f7ac] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510121636/public/uploads )
+  INFO [6ae8f7ac] Finished in 0.055 seconds with exit status 0 (successful).
+ DEBUG [213192aa] Running [ -L /var/www/cookpad/releases/20170510121636/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [213192aa] Command: [ -L /var/www/cookpad/releases/20170510121636/public/assets ]
+ DEBUG [213192aa] Finished in 0.076 seconds with exit status 1 (failed).
+ DEBUG [48bb328c] Running [ -d /var/www/cookpad/releases/20170510121636/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [48bb328c] Command: [ -d /var/www/cookpad/releases/20170510121636/public/assets ]
+ DEBUG [48bb328c] Finished in 0.081 seconds with exit status 1 (failed).
+  INFO [406b1a5e] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510121636/public/assets as ec2-user@52.196.181.96
+ DEBUG [406b1a5e] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510121636/public/assets )
+  INFO [406b1a5e] Finished in 0.087 seconds with exit status 0 (successful).
+ DEBUG [c102ad79] Running if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [c102ad79] Command: if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi
+ DEBUG [c102ad79] Finished in 0.083 seconds with exit status 0 (successful).
+ DEBUG [58e601fe] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle as ec2-user@52.196.181.96
+ DEBUG [58e601fe] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle )
+ DEBUG [58e601fe] 	The following gems are missing
+ DEBUG [58e601fe] 	 * nokogiri (1.7.2)
+ DEBUG [58e601fe] 	 * rails-dom-testing (2.0.2)
+ DEBUG [58e601fe] 	 * loofah (2.0.3)
+ DEBUG [58e601fe] 	 * rails-html-sanitizer (1.0.3)
+ DEBUG [58e601fe] 	 * actionview (5.0.2)
+ DEBUG [58e601fe] 	 * actionpack (5.0.2)
+ DEBUG [58e601fe] 	 * actioncable (5.0.2)
+ DEBUG [58e601fe] 	 * globalid (0.4.0)
+ DEBUG [58e601fe] 	 * activejob (5.0.2)
+ DEBUG [58e601fe] 	 * mail (2.6.5)
+ DEBUG [58e601fe] 	 * actionmailer (5.0.2)
+ DEBUG [58e601fe] 	 * activemodel (5.0.2)
+ DEBUG [58e601fe] 	 * activerecord (5.0.2)
+ DEBUG [58e601fe] 	 * net-ssh (4.1.0)
+ DEBUG [58e601fe] 	 * net-scp (1.2.1)
+ DEBUG [58e601fe] 	 * sshkit (1.13.1)
+ DEBUG [58e601fe] 	 * airbrussh (1.2.0)
+ DEBUG [58e601fe] 	 * bindex (0.5.0)
+ DEBUG [58e601fe] 	 * byebug (9.0.6)
+ DEBUG [58e601fe] 	 * capistrano (3.8.1)
+ DEBUG [58e601fe] 	 * capistrano-bundler (1.2.0)
+ DEBUG [58e601fe] 	 * capistrano-rails (1.2.3)
+ DEBUG [58e601fe] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [58e601fe] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [58e601fe] 	 * railties (5.0.2)
+ DEBUG [58e601fe] 	 * coffee-rails (4.1.1)
+ DEBUG [58e601fe] 	 * ffi (1.9.18)
+ DEBUG [58e601fe] 	 * html2haml (2.2.0)
+ DEBUG [58e601fe] 	 * haml-rails (1.0.0)
+ DEBUG [58e601fe] 	 * jbuilder (2.6.3)
+ DEBUG [58e601fe] 	 * jquery-rails (4.3.1)
+ DEBUG [58e601fe] 	 * rb-fsevent (0.9.8)
+ DEBUG [58e601fe] 	 * rb-inotify (0.9.8)
+ DEBUG [58e601fe] 	 * listen (3.0.8)
+ DEBUG [58e601fe] 	 * sprockets-rails (3.2.0)
+ DEBUG [58e601fe] 	 * rails (5.0.2)
+ DEBUG [58e601fe] 	 * sass-rails (5.0.6)
+ DEBUG [58e601fe] 	 * spring (2.0.1)
+ DEBUG [58e601fe] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [58e601fe] 	 * web-console (3.5.0)
+ DEBUG [58e601fe] 	Install missing gems with `bundle install`
+ DEBUG [58e601fe] Finished in 0.445 seconds with exit status 1 (failed).
+  INFO [9a598a38] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet as ec2-user@52.196.181.96
+ DEBUG [9a598a38] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet )
+  INFO [9a598a38] Finished in 47.854 seconds with exit status 0 (successful).
+ DEBUG [4d2db1f4] Running if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [4d2db1f4] Command: if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi
+ DEBUG [4d2db1f4] Finished in 0.119 seconds with exit status 0 (successful).
+  INFO [7cd80c8e] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.196.181.96
+ DEBUG [7cd80c8e] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+ DEBUG [7cd80c8e] 	I, [2017-05-10T12:17:35.640583 #28840]  INFO -- : Writing /var/www/cookpad/releases/20170510121636/public/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js
+ DEBUG [7cd80c8e] 	I, [2017-05-10T12:17:35.641105 #28840]  INFO -- : Writing /var/www/cookpad/releases/20170510121636/public/assets/application-731eb6bd5d68d47eb9b931e7f005a458f11d76b23a517cc0bd892977bc948817.js.gz
+ DEBUG [7cd80c8e] 	I, [2017-05-10T12:17:35.654314 #28840]  INFO -- : Writing /var/www/cookpad/releases/20170510121636/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css
+ DEBUG [7cd80c8e] 	I, [2017-05-10T12:17:35.654529 #28840]  INFO -- : Writing /var/www/cookpad/releases/20170510121636/public/assets/application-e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855.css.gz
+  INFO [7cd80c8e] Finished in 6.091 seconds with exit status 0 (successful).
+ DEBUG [4fb1358b] Running if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [4fb1358b] Command: if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi
+ DEBUG [4fb1358b] Finished in 0.094 seconds with exit status 0 (successful).
+  INFO [753007cb] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121636/assets_manifest_backup as ec2-user@52.196.181.96
+ DEBUG [753007cb] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510121636/assets_manifest_backup )
+  INFO [753007cb] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [73d38858] Running /usr/bin/env ls /var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest* as ec2-user@52.196.181.96
+ DEBUG [73d38858] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest* )
+ DEBUG [73d38858] 	/var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json
+ DEBUG [73d38858] Finished in 0.084 seconds with exit status 0 (successful).
+ DEBUG [8000685d] Running /usr/bin/env ls /var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest* as ec2-user@52.196.181.96
+ DEBUG [8000685d] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest* )
+ DEBUG [8000685d] 	/var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json
+ DEBUG [8000685d] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [26318340] Running /usr/bin/env cp /var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json /var/www/cookpad/releases/20170510121636/assets_manifest_backup as ec2-user@52.196.181.96
+ DEBUG [26318340] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/cookpad/releases/20170510121636/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json /var/www/cookpad/releases/20170510121636/assets_manifest_backup )
+  INFO [26318340] Finished in 0.099 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [84e415cd] Running if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [84e415cd] Command: if test ! -d /var/www/cookpad/releases/20170510121636; then echo "Directory does not exist '/var/www/cookpad/releases/20170510121636'" 1>&2; false; fi
+ DEBUG [84e415cd] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [a28aaa87] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.196.181.96
+ DEBUG [a28aaa87] Command: cd /var/www/cookpad/releases/20170510121636 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [a28aaa87] Finished in 1.500 seconds with exit status 0 (successful).
+  INFO [829ee40d] Running /usr/bin/env ln -s /var/www/cookpad/releases/20170510121636 /var/www/cookpad/releases/current as ec2-user@52.196.181.96
+ DEBUG [829ee40d] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/releases/20170510121636 /var/www/cookpad/releases/current )
+  INFO [829ee40d] Finished in 0.068 seconds with exit status 0 (successful).
+  INFO [1d5dc320] Running /usr/bin/env mv /var/www/cookpad/releases/current /var/www/cookpad as ec2-user@52.196.181.96
+ DEBUG [1d5dc320] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/cookpad/releases/current /var/www/cookpad )
+  INFO [1d5dc320] Finished in 0.070 seconds with exit status 0 (successful).
+ DEBUG [7cc487f8] Running if test ! -d /var/www/cookpad/current; then echo "Directory does not exist '/var/www/cookpad/current'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [7cc487f8] Command: if test ! -d /var/www/cookpad/current; then echo "Directory does not exist '/var/www/cookpad/current'" 1>&2; false; fi
+ DEBUG [7cc487f8] Finished in 0.086 seconds with exit status 0 (successful).
+ DEBUG [4c6000bd] Running [ -e /var/www/cookpad/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/cookpad/shared/tmp/pids/unicorn.pid` as ec2-user@52.196.181.96
+ DEBUG [4c6000bd] Command: [ -e /var/www/cookpad/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/cookpad/shared/tmp/pids/unicorn.pid`
+ DEBUG [4c6000bd] Finished in 0.082 seconds with exit status 1 (failed).
+  INFO [62fa7d6d] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/cookpad/current/config/unicorn.rb -E deployment -D  as ec2-user@52.196.181.96
+ DEBUG [62fa7d6d] Command: cd /var/www/cookpad/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/cookpad/current/config/unicorn.rb -E deployment -D  )
+ DEBUG [62fa7d6d] 	master failed to start, check stderr log for details
+  INFO ---------------------------------------------------------------------------
+  INFO START 2017-05-10 21:25:22 +0900 cap production deploy
+  INFO ---------------------------------------------------------------------------
+ DEBUG [35f2992a] Running [ -d $HOME/.rbenv/versions/2.3.1 ] as ec2-user@52.196.181.96
+ DEBUG [35f2992a] Command: [ -d $HOME/.rbenv/versions/2.3.1 ]
+ DEBUG [35f2992a] Finished in 0.767 seconds with exit status 0 (successful).
+  INFO [068da332] Running /usr/bin/env mkdir -p /tmp as ec2-user@52.196.181.96
+ DEBUG [068da332] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /tmp )
+  INFO [068da332] Finished in 0.108 seconds with exit status 0 (successful).
+ DEBUG Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 0.0%
+  INFO Uploading /tmp/git-ssh-cookpad-production-ryotak.sh 100.0%
+  INFO [4bbbdbf8] Running /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh as ec2-user@52.196.181.96
+ DEBUG [4bbbdbf8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env chmod 700 /tmp/git-ssh-cookpad-production-ryotak.sh )
+  INFO [4bbbdbf8] Finished in 0.082 seconds with exit status 0 (successful).
+  INFO [161ff6b4] Running /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD as ec2-user@52.196.181.96
+ DEBUG [161ff6b4] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git ls-remote git@github.com:ko-ryo/cookpad.git HEAD )
+ DEBUG [161ff6b4] 	b68819398a7835ad3e763efafd58b45b5f41df20	HEAD
+  INFO [161ff6b4] Finished in 1.608 seconds with exit status 0 (successful).
+  INFO [ea70695c] Running /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases as ec2-user@52.196.181.96
+ DEBUG [ea70695c] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared /var/www/cookpad/releases )
+  INFO [ea70695c] Finished in 0.093 seconds with exit status 0 (successful).
+  INFO [1278aaa7] Running /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets as ec2-user@52.196.181.96
+ DEBUG [1278aaa7] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/shared/log /var/www/cookpad/shared/tmp/pids /var/www/cookpad/shared/tmp/cache /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/shared/public/system /var/www/cookpad/shared/public/uploads /var/www/cookpad/shared/public/assets )
+  INFO [1278aaa7] Finished in 0.105 seconds with exit status 0 (successful).
+ DEBUG [6140c533] Running [ -f /var/www/cookpad/current/REVISION ] as ec2-user@52.196.181.96
+ DEBUG [6140c533] Command: [ -f /var/www/cookpad/current/REVISION ]
+ DEBUG [6140c533] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [8751f658] Running /usr/bin/env cat /var/www/cookpad/current/REVISION 2>/dev/null as ec2-user@52.196.181.96
+ DEBUG [8751f658] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cat /var/www/cookpad/current/REVISION 2>/dev/null )
+ DEBUG [8751f658] 	b68819398a7835ad3e763efafd58b45b5f41df20
+ DEBUG [8751f658] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [22bdb91d] Running [ -f /var/www/cookpad/repo/HEAD ] as ec2-user@52.196.181.96
+ DEBUG [22bdb91d] Command: [ -f /var/www/cookpad/repo/HEAD ]
+ DEBUG [22bdb91d] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO The repository mirror is at /var/www/cookpad/repo
+ DEBUG [f70451ed] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [f70451ed] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [f70451ed] Finished in 0.131 seconds with exit status 0 (successful).
+  INFO [80f79110] Running /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git as ec2-user@52.196.181.96
+ DEBUG [80f79110] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote set-url origin git@github.com:ko-ryo/cookpad.git )
+  INFO [80f79110] Finished in 0.116 seconds with exit status 0 (successful).
+  INFO [e3df3e3b] Running /usr/bin/env git remote update --prune as ec2-user@52.196.181.96
+ DEBUG [e3df3e3b] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git remote update --prune )
+ DEBUG [e3df3e3b] 	Fetching origin
+  INFO [e3df3e3b] Finished in 1.657 seconds with exit status 0 (successful).
+ DEBUG [11b200f0] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [11b200f0] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [11b200f0] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [50f437bc] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510122525 as ec2-user@52.196.181.96
+ DEBUG [50f437bc] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510122525 )
+  INFO [50f437bc] Finished in 0.102 seconds with exit status 0 (successful).
+  INFO [fa1905f9] Running /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510122525 as ec2-user@52.196.181.96
+ DEBUG [fa1905f9] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git archive master | /usr/bin/env tar -x -f - -C /var/www/cookpad/releases/20170510122525 )
+  INFO [fa1905f9] Finished in 0.118 seconds with exit status 0 (successful).
+ DEBUG [cfe0ea33] Running if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [cfe0ea33] Command: if test ! -d /var/www/cookpad/repo; then echo "Directory does not exist '/var/www/cookpad/repo'" 1>&2; false; fi
+ DEBUG [cfe0ea33] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [52ed2483] Running /usr/bin/env git rev-list --max-count=1 master as ec2-user@52.196.181.96
+ DEBUG [52ed2483] Command: cd /var/www/cookpad/repo && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" GIT_ASKPASS="/bin/echo" GIT_SSH="/tmp/git-ssh-cookpad-production-ryotak.sh" ; /usr/bin/env git rev-list --max-count=1 master )
+ DEBUG [52ed2483] 	b68819398a7835ad3e763efafd58b45b5f41df20
+ DEBUG [52ed2483] Finished in 0.129 seconds with exit status 0 (successful).
+ DEBUG [f00acc1a] Running if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [f00acc1a] Command: if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi
+ DEBUG [f00acc1a] Finished in 0.452 seconds with exit status 0 (successful).
+  INFO [c8fbdbf6] Running /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION as ec2-user@52.196.181.96
+ DEBUG [c8fbdbf6] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env echo "b68819398a7835ad3e763efafd58b45b5f41df20" >> REVISION )
+  INFO [c8fbdbf6] Finished in 0.098 seconds with exit status 0 (successful).
+  INFO [3af00167] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510122525 /var/www/cookpad/releases/20170510122525/tmp /var/www/cookpad/releases/20170510122525/vendor /var/www/cookpad/releases/20170510122525/public as ec2-user@52.196.181.96
+ DEBUG [3af00167] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510122525 /var/www/cookpad/releases/20170510122525/tmp /var/www/cookpad/releases/20170510122525/vendor /var/www/cookpad/releases/20170510122525/public )
+  INFO [3af00167] Finished in 0.123 seconds with exit status 0 (successful).
+ DEBUG [7b2ca772] Running [ -L /var/www/cookpad/releases/20170510122525/log ] as ec2-user@52.196.181.96
+ DEBUG [7b2ca772] Command: [ -L /var/www/cookpad/releases/20170510122525/log ]
+ DEBUG [7b2ca772] Finished in 0.141 seconds with exit status 1 (failed).
+ DEBUG [fe1f1782] Running [ -d /var/www/cookpad/releases/20170510122525/log ] as ec2-user@52.196.181.96
+ DEBUG [fe1f1782] Command: [ -d /var/www/cookpad/releases/20170510122525/log ]
+ DEBUG [fe1f1782] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [8d260545] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510122525/log as ec2-user@52.196.181.96
+ DEBUG [8d260545] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510122525/log )
+  INFO [8d260545] Finished in 0.107 seconds with exit status 0 (successful).
+  INFO [e43ccb81] Running /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510122525/log as ec2-user@52.196.181.96
+ DEBUG [e43ccb81] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/log /var/www/cookpad/releases/20170510122525/log )
+  INFO [e43ccb81] Finished in 0.103 seconds with exit status 0 (successful).
+ DEBUG [44fd0654] Running [ -L /var/www/cookpad/releases/20170510122525/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [44fd0654] Command: [ -L /var/www/cookpad/releases/20170510122525/tmp/pids ]
+ DEBUG [44fd0654] Finished in 0.131 seconds with exit status 1 (failed).
+ DEBUG [fa9110f8] Running [ -d /var/www/cookpad/releases/20170510122525/tmp/pids ] as ec2-user@52.196.181.96
+ DEBUG [fa9110f8] Command: [ -d /var/www/cookpad/releases/20170510122525/tmp/pids ]
+ DEBUG [fa9110f8] Finished in 0.114 seconds with exit status 1 (failed).
+  INFO [fd3b9d39] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510122525/tmp/pids as ec2-user@52.196.181.96
+ DEBUG [fd3b9d39] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/pids /var/www/cookpad/releases/20170510122525/tmp/pids )
+  INFO [fd3b9d39] Finished in 0.095 seconds with exit status 0 (successful).
+ DEBUG [deb68392] Running [ -L /var/www/cookpad/releases/20170510122525/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [deb68392] Command: [ -L /var/www/cookpad/releases/20170510122525/tmp/cache ]
+ DEBUG [deb68392] Finished in 0.110 seconds with exit status 1 (failed).
+ DEBUG [4a595ccd] Running [ -d /var/www/cookpad/releases/20170510122525/tmp/cache ] as ec2-user@52.196.181.96
+ DEBUG [4a595ccd] Command: [ -d /var/www/cookpad/releases/20170510122525/tmp/cache ]
+ DEBUG [4a595ccd] Finished in 0.110 seconds with exit status 0 (successful).
+  INFO [8a14a7e8] Running /usr/bin/env rm -rf /var/www/cookpad/releases/20170510122525/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [8a14a7e8] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env rm -rf /var/www/cookpad/releases/20170510122525/tmp/cache )
+  INFO [8a14a7e8] Finished in 0.124 seconds with exit status 0 (successful).
+  INFO [9801afdf] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510122525/tmp/cache as ec2-user@52.196.181.96
+ DEBUG [9801afdf] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/cache /var/www/cookpad/releases/20170510122525/tmp/cache )
+  INFO [9801afdf] Finished in 0.171 seconds with exit status 0 (successful).
+ DEBUG [e3150ed1] Running [ -L /var/www/cookpad/releases/20170510122525/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [e3150ed1] Command: [ -L /var/www/cookpad/releases/20170510122525/tmp/sockets ]
+ DEBUG [e3150ed1] Finished in 0.122 seconds with exit status 1 (failed).
+ DEBUG [2adf6b8b] Running [ -d /var/www/cookpad/releases/20170510122525/tmp/sockets ] as ec2-user@52.196.181.96
+ DEBUG [2adf6b8b] Command: [ -d /var/www/cookpad/releases/20170510122525/tmp/sockets ]
+ DEBUG [2adf6b8b] Finished in 0.100 seconds with exit status 1 (failed).
+  INFO [1a08087a] Running /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510122525/tmp/sockets as ec2-user@52.196.181.96
+ DEBUG [1a08087a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/tmp/sockets /var/www/cookpad/releases/20170510122525/tmp/sockets )
+  INFO [1a08087a] Finished in 0.130 seconds with exit status 0 (successful).
+ DEBUG [2aeb2d3a] Running [ -L /var/www/cookpad/releases/20170510122525/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [2aeb2d3a] Command: [ -L /var/www/cookpad/releases/20170510122525/vendor/bundle ]
+ DEBUG [2aeb2d3a] Finished in 0.108 seconds with exit status 1 (failed).
+ DEBUG [6cf2d5d5] Running [ -d /var/www/cookpad/releases/20170510122525/vendor/bundle ] as ec2-user@52.196.181.96
+ DEBUG [6cf2d5d5] Command: [ -d /var/www/cookpad/releases/20170510122525/vendor/bundle ]
+ DEBUG [6cf2d5d5] Finished in 0.112 seconds with exit status 1 (failed).
+  INFO [93277a5b] Running /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510122525/vendor/bundle as ec2-user@52.196.181.96
+ DEBUG [93277a5b] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/vendor/bundle /var/www/cookpad/releases/20170510122525/vendor/bundle )
+  INFO [93277a5b] Finished in 0.132 seconds with exit status 0 (successful).
+ DEBUG [4adcb9eb] Running [ -L /var/www/cookpad/releases/20170510122525/public/system ] as ec2-user@52.196.181.96
+ DEBUG [4adcb9eb] Command: [ -L /var/www/cookpad/releases/20170510122525/public/system ]
+ DEBUG [4adcb9eb] Finished in 0.124 seconds with exit status 1 (failed).
+ DEBUG [accb7284] Running [ -d /var/www/cookpad/releases/20170510122525/public/system ] as ec2-user@52.196.181.96
+ DEBUG [accb7284] Command: [ -d /var/www/cookpad/releases/20170510122525/public/system ]
+ DEBUG [accb7284] Finished in 0.125 seconds with exit status 1 (failed).
+  INFO [6e23b326] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510122525/public/system as ec2-user@52.196.181.96
+ DEBUG [6e23b326] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/system /var/www/cookpad/releases/20170510122525/public/system )
+  INFO [6e23b326] Finished in 0.131 seconds with exit status 0 (successful).
+ DEBUG [4a05ba56] Running [ -L /var/www/cookpad/releases/20170510122525/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [4a05ba56] Command: [ -L /var/www/cookpad/releases/20170510122525/public/uploads ]
+ DEBUG [4a05ba56] Finished in 0.137 seconds with exit status 1 (failed).
+ DEBUG [ab2eed53] Running [ -d /var/www/cookpad/releases/20170510122525/public/uploads ] as ec2-user@52.196.181.96
+ DEBUG [ab2eed53] Command: [ -d /var/www/cookpad/releases/20170510122525/public/uploads ]
+ DEBUG [ab2eed53] Finished in 0.127 seconds with exit status 1 (failed).
+  INFO [e3d8047a] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510122525/public/uploads as ec2-user@52.196.181.96
+ DEBUG [e3d8047a] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/uploads /var/www/cookpad/releases/20170510122525/public/uploads )
+  INFO [e3d8047a] Finished in 0.104 seconds with exit status 0 (successful).
+ DEBUG [6be7c516] Running [ -L /var/www/cookpad/releases/20170510122525/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [6be7c516] Command: [ -L /var/www/cookpad/releases/20170510122525/public/assets ]
+ DEBUG [6be7c516] Finished in 0.104 seconds with exit status 1 (failed).
+ DEBUG [890fb8b7] Running [ -d /var/www/cookpad/releases/20170510122525/public/assets ] as ec2-user@52.196.181.96
+ DEBUG [890fb8b7] Command: [ -d /var/www/cookpad/releases/20170510122525/public/assets ]
+ DEBUG [890fb8b7] Finished in 0.096 seconds with exit status 1 (failed).
+  INFO [f46a23ff] Running /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510122525/public/assets as ec2-user@52.196.181.96
+ DEBUG [f46a23ff] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/shared/public/assets /var/www/cookpad/releases/20170510122525/public/assets )
+  INFO [f46a23ff] Finished in 0.094 seconds with exit status 0 (successful).
+ DEBUG [ff3163c6] Running if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [ff3163c6] Command: if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi
+ DEBUG [ff3163c6] Finished in 0.117 seconds with exit status 0 (successful).
+ DEBUG [97a7771d] Running $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle as ec2-user@52.196.181.96
+ DEBUG [97a7771d] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle check --path /var/www/cookpad/shared/bundle )
+ DEBUG [97a7771d] 	The following gems are missing
+ DEBUG [97a7771d] 	 * net-ssh (4.1.0)
+ DEBUG [97a7771d] 	 * net-scp (1.2.1)
+ DEBUG [97a7771d] 	 * sshkit (1.13.1)
+ DEBUG [97a7771d] 	 * airbrussh (1.2.0)
+ DEBUG [97a7771d] 	 * bindex (0.5.0)
+ DEBUG [97a7771d] 	 * byebug (9.0.6)
+ DEBUG [97a7771d] 	 * capistrano (3.8.1)
+ DEBUG [97a7771d] 	 * capistrano-bundler (1.2.0)
+ DEBUG [97a7771d] 	 * capistrano-rails (1.2.3)
+ DEBUG [97a7771d] 	 * capistrano-rbenv (2.1.1)
+ DEBUG [97a7771d] 	 * capistrano3-unicorn (0.2.1)
+ DEBUG [97a7771d] 	 * ffi (1.9.18)
+ DEBUG [97a7771d] 	 * rb-fsevent (0.9.8)
+ DEBUG [97a7771d] 	 * rb-inotify (0.9.8)
+ DEBUG [97a7771d] 	 * listen (3.0.8)
+ DEBUG [97a7771d] 	 * spring (2.0.1)
+ DEBUG [97a7771d] 	 * spring-watcher-listen (2.0.1)
+ DEBUG [97a7771d] 	 * web-console (3.5.0)
+ DEBUG [97a7771d] 	Install missing gems with `bundle install`
+ DEBUG [97a7771d] Finished in 0.356 seconds with exit status 1 (failed).
+  INFO [b35416ea] Running $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet as ec2-user@52.196.181.96
+ DEBUG [b35416ea] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; $HOME/.rbenv/bin/rbenv exec bundle install --path /var/www/cookpad/shared/bundle --without development test --deployment --quiet )
+  INFO [b35416ea] Finished in 1.935 seconds with exit status 0 (successful).
+ DEBUG [6cb44ee9] Running if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [6cb44ee9] Command: if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi
+ DEBUG [6cb44ee9] Finished in 0.101 seconds with exit status 0 (successful).
+  INFO [7c79007e] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile as ec2-user@52.196.181.96
+ DEBUG [7c79007e] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake assets:precompile )
+  INFO [7c79007e] Finished in 1.435 seconds with exit status 0 (successful).
+ DEBUG [1dee04ca] Running if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [1dee04ca] Command: if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi
+ DEBUG [1dee04ca] Finished in 0.123 seconds with exit status 0 (successful).
+  INFO [7a4b631a] Running /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510122525/assets_manifest_backup as ec2-user@52.196.181.96
+ DEBUG [7a4b631a] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mkdir -p /var/www/cookpad/releases/20170510122525/assets_manifest_backup )
+  INFO [7a4b631a] Finished in 0.110 seconds with exit status 0 (successful).
+ DEBUG [4803d413] Running /usr/bin/env ls /var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest* as ec2-user@52.196.181.96
+ DEBUG [4803d413] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest* )
+ DEBUG [4803d413] 	/var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json
+ DEBUG [4803d413] Finished in 0.138 seconds with exit status 0 (successful).
+ DEBUG [1ba01a19] Running /usr/bin/env ls /var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest* as ec2-user@52.196.181.96
+ DEBUG [1ba01a19] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ls /var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest* )
+ DEBUG [1ba01a19] 	/var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json
+ DEBUG [1ba01a19] Finished in 0.114 seconds with exit status 0 (successful).
+  INFO [201d7b35] Running /usr/bin/env cp /var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json /var/www/cookpad/releases/20170510122525/assets_manifest_backup as ec2-user@52.196.181.96
+ DEBUG [201d7b35] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env cp /var/www/cookpad/releases/20170510122525/public/assets/.sprockets-manifest-6d79b1d6929f274f0ac4288af1e172a5.json /var/www/cookpad/releases/20170510122525/assets_manifest_backup )
+  INFO [201d7b35] Finished in 0.136 seconds with exit status 0 (successful).
+  INFO [deploy:migrate] Run `rake db:migrate`
+ DEBUG [e6db2914] Running if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [e6db2914] Command: if test ! -d /var/www/cookpad/releases/20170510122525; then echo "Directory does not exist '/var/www/cookpad/releases/20170510122525'" 1>&2; false; fi
+ DEBUG [e6db2914] Finished in 0.113 seconds with exit status 0 (successful).
+  INFO [8ee3b1d1] Running $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate as ec2-user@52.196.181.96
+ DEBUG [8ee3b1d1] Command: cd /var/www/cookpad/releases/20170510122525 && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec rake db:migrate )
+  INFO [8ee3b1d1] Finished in 1.481 seconds with exit status 0 (successful).
+  INFO [c8a8d4da] Running /usr/bin/env ln -s /var/www/cookpad/releases/20170510122525 /var/www/cookpad/releases/current as ec2-user@52.196.181.96
+ DEBUG [c8a8d4da] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env ln -s /var/www/cookpad/releases/20170510122525 /var/www/cookpad/releases/current )
+  INFO [c8a8d4da] Finished in 0.109 seconds with exit status 0 (successful).
+  INFO [23f07e90] Running /usr/bin/env mv /var/www/cookpad/releases/current /var/www/cookpad as ec2-user@52.196.181.96
+ DEBUG [23f07e90] Command: ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" ; /usr/bin/env mv /var/www/cookpad/releases/current /var/www/cookpad )
+  INFO [23f07e90] Finished in 0.134 seconds with exit status 0 (successful).
+ DEBUG [2888d46e] Running if test ! -d /var/www/cookpad/current; then echo "Directory does not exist '/var/www/cookpad/current'" 1>&2; false; fi as ec2-user@52.196.181.96
+ DEBUG [2888d46e] Command: if test ! -d /var/www/cookpad/current; then echo "Directory does not exist '/var/www/cookpad/current'" 1>&2; false; fi
+ DEBUG [2888d46e] Finished in 0.133 seconds with exit status 0 (successful).
+ DEBUG [d79fce86] Running [ -e /var/www/cookpad/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/cookpad/shared/tmp/pids/unicorn.pid` as ec2-user@52.196.181.96
+ DEBUG [d79fce86] Command: [ -e /var/www/cookpad/shared/tmp/pids/unicorn.pid ] && kill -0 `cat /var/www/cookpad/shared/tmp/pids/unicorn.pid`
+ DEBUG [d79fce86] 	bash: line 0: kill: (29120) - No such process
+ DEBUG [d79fce86] Finished in 0.113 seconds with exit status 1 (failed).
+  INFO [e2c0d9d8] Running $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/cookpad/current/config/unicorn.rb -E deployment -D  as ec2-user@52.196.181.96
+ DEBUG [e2c0d9d8] Command: cd /var/www/cookpad/current && ( export RBENV_ROOT="$HOME/.rbenv" RBENV_VERSION="2.3.1" RAILS_ENV="production" ; $HOME/.rbenv/bin/rbenv exec bundle exec unicorn -c /var/www/cookpad/current/config/unicorn.rb -E deployment -D  )
+ DEBUG [e2c0d9d8] 	master failed to start, check stderr log for details

@@ -1,1 +1,28 @@
-%p helloworldddddddddddddddddddddddddddddd!
+.nav
+  .nav-company-name
+    %p cookpad
+  .nav-search
+    = form_for [@recipe], class: 'clearfix' do |f|
+      .nav-search-form
+        %p レシピ検索
+        = f.text_field :title, row: 1, placeholder: '料理名を入力してください。', class: 'search-form'
+      = f.submit '検索', class: 'search-button'
+  .nav-post
+    %a.nav-post-button{ href: new_recipe_path }
+      %p レシピを書く
+  .nav-user
+    %a.nav-user-button{ href: new_recipe_path }
+      %p ログアウト
+
+.side-bar.clearfix
+  .side-bar-recipe
+  .side-bar-premium
+
+.main.clearfix
+  %p   レシピ
+  .main-recipes
+    .main-recipe
+      .main-recipe__image
+      .main-recipe__title
+      .main-recipe__point
+      .main-recipe__user

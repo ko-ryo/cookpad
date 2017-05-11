@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+  background-color: #FAF0E6;
+}
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  flex-direction: column;
+  font-family: "Hiragino Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica,Arial, sans-serif;
+  color: #434a54;
+}
+
+h1,h2,h3,h4,h5,h6,p {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.clearfix:after {
+  content: '';
+  display: block;
+  clear: both;
+}

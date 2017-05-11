@@ -1,0 +1,52 @@
+.nav{
+  height: 90px;
+  min-height: 90px;
+  width: 1088px;
+  max-width: 100%;
+  background-color: #FF9933;
+  text-align: center;
+  line-height: 100px;
+  overflow:hidden;
+  margin: 5px;
+  border-radius: 5px
+}
+
+.nav-company-name, .nav-search, .nav-post, .nav-user{
+  float: left;
+}
+
+.nav-company-name{
+  width: 250px;
+  font-size: 16px;
+  p{ font-size: 30px;
+     font-style: italic;
+     color: black;
+   }
+}
+
+.nav-search{
+  width: 480px;
+  line-height: 60px;
+  text-align: left;
+  p{ font-size: 14px;}
+}
+
+.search-form{
+  float: left;
+  desplay: inline;
+  margin-top: -10px;
+  margin-left: 20px;
+  min-width: 400px;
+}
+
+.search-button{
+  float: left;
+  desplay: inline;
+  margin-top: -10px;
+}
+
+.nav-post{
+  width: 160px;
+}
+
+

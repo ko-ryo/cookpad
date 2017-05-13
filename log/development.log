@@ -18277,3 +18277,1112 @@ rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
   Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
   Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
   Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (235.9ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:33:51 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.9ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (108.2ms)
+Completed 200 OK in 180ms (Views: 158.3ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/images/" for ::1 at 2017-05-13 16:33:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (26.7ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.6ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (376.6ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:35:47 +0900
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Recipe::ImageUploader):
+  
+app/models/recipe.rb:6:in `<class:Recipe>'
+app/models/recipe.rb:1:in `<top (required)>'
+app/controllers/recipes_controller.rb:6:in `index'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (10.2ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (7.0ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (136.7ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:37:45 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.9ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (212.4ms)
+Completed 200 OK in 506ms (Views: 132.0ms | ActiveRecord: 325.6ms)
+
+
+Started GET "/images/" for ::1 at 2017-05-13 16:37:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.5ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (85.6ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (323.2ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:37:55 +0900
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Recipe::ImageUploader):
+  
+app/models/recipe.rb:6:in `<class:Recipe>'
+app/models/recipe.rb:1:in `<top (required)>'
+app/controllers/recipes_controller.rb:6:in `index'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.5ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.9ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.1ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (84.7ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:39:11 +0900
+Processing by RecipesController#index as HTML
+Completed 500 Internal Server Error in 9ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (uninitialized constant Recipe::ImageUploader):
+  
+app/models/recipe.rb:6:in `<class:Recipe>'
+app/models/recipe.rb:1:in `<top (required)>'
+app/controllers/recipes_controller.rb:6:in `index'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.9ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.3ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (83.0ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:44:23 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (7.9ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (4.0ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (289.3ms)
+Completed 200 OK in 504ms (Views: 446.0ms | ActiveRecord: 21.2ms)
+
+
+Started GET "/images/" for ::1 at 2017-05-13 16:44:24 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (75.6ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.1ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (327.1ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:46:37 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (3.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (1.0ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (68.1ms)
+Completed 200 OK in 108ms (Views: 94.2ms | ActiveRecord: 5.4ms)
+
+
+Started GET "/images/" for ::1 at 2017-05-13 16:46:37 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (15.7ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (21.3ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.6ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (297.8ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:46:44 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (1.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (34.2ms)
+Completed 200 OK in 88ms (Views: 82.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/images/" for ::1 at 2017-05-13 16:46:44 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.8ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (13.8ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (4.2ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (350.7ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:47:51 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (25.5ms)
+Completed 200 OK in 60ms (Views: 54.7ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/images/" for ::1 at 2017-05-13 16:47:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.1ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (16.6ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (294.0ms)
+Started GET "/images/" for ::1 at 2017-05-13 16:49:45 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.4ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (12.3ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.9ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (113.2ms)
+Started GET "/recipes/new" for ::1 at 2017-05-13 16:52:27 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (19.0ms)
+Completed 200 OK in 114ms (Views: 52.5ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/images/" for ::1 at 2017-05-13 16:52:28 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (13.7ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (120.6ms)
+Started GET "/images/" for ::1 at 2017-05-13 16:52:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/images"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (14.4ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.8ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (137.1ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:52:38 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (41.3ms)
+Completed 200 OK in 83ms (Views: 59.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E" for ::1 at 2017-05-13 16:52:39 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (49.7ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (182.4ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:52:40 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (17.8ms)
+Completed 200 OK in 41ms (Views: 37.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E" for ::1 at 2017-05-13 16:52:41 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.1ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (16.0ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.6ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (126.8ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:52:51 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (18.7ms)
+Completed 200 OK in 46ms (Views: 42.5ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E" for ::1 at 2017-05-13 16:52:51 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.0ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (15.8ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (1.2ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.8ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (145.1ms)
+Started GET "/recipes/new" for ::1 at 2017-05-13 16:53:21 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (23.5ms)
+Completed 200 OK in 101ms (Views: 60.1ms | ActiveRecord: 7.2ms)
+
+
+Started GET "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E" for ::1 at 2017-05-13 16:53:22 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (11.9ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.0ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.9ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (123.4ms)
+Started POST "/recipes" for ::1 at 2017-05-13 16:54:06 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYwVsWXA84TWKZNNfnhxFPncCgZLBzb9Ng9DTbdjzIrxP3VLuMZeIcvMHbnXA6Ys/NJgodW/Kebz5fV8+kNOUw==", "recipe"=>{"title"=>"激ウマカレー", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ff1f37d13a0 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46450-153jrap.jpg>, @original_filename="20160804204526.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"20160804204526.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"美味しすぎる！", "materials_attributes"=>{"0"=>{"name"=>"ジャガイモ", "quantity"=>"２個"}, "1"=>{"name"=>"そのほか", "quantity"=>""}, "2"=>{"name"=>"", "quantity"=>""}, "3"=>{"name"=>"", "quantity"=>""}, "4"=>{"name"=>"", "quantity"=>""}, "5"=>{"name"=>"", "quantity"=>""}, "6"=>{"name"=>"", "quantity"=>""}}, "steps_attributes"=>{"0"=>{"body"=>"いつもと同じ！"}, "1"=>{"body"=>""}, "2"=>{"body"=>""}, "3"=>{"body"=>""}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 20ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `resize_to_fit' for #<ImageUploader::Uploader70338622065800:0x007ff1f56a0060>):
+  
+app/controllers/recipes_controller.rb:24:in `create'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.6ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.7ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.3ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (87.2ms)
+Started POST "/recipes" for ::1 at 2017-05-13 16:55:00 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SYwVsWXA84TWKZNNfnhxFPncCgZLBzb9Ng9DTbdjzIrxP3VLuMZeIcvMHbnXA6Ys/NJgodW/Kebz5fV8+kNOUw==", "recipe"=>{"title"=>"激ウマカレー", "image"=>#<ActionDispatch::Http::UploadedFile:0x007ff1f70d38d8 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46450-15cfkm9.jpg>, @original_filename="20160804204526.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"20160804204526.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"美味しすぎる！", "materials_attributes"=>{"0"=>{"name"=>"ジャガイモ", "quantity"=>"２個"}, "1"=>{"name"=>"そのほか", "quantity"=>""}, "2"=>{"name"=>"", "quantity"=>""}, "3"=>{"name"=>"", "quantity"=>""}, "4"=>{"name"=>"", "quantity"=>""}, "5"=>{"name"=>"", "quantity"=>""}, "6"=>{"name"=>"", "quantity"=>""}}, "steps_attributes"=>{"0"=>{"body"=>"いつもと同じ！"}, "1"=>{"body"=>""}, "2"=>{"body"=>""}, "3"=>{"body"=>""}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms)
+
+
+  
+NoMethodError (undefined method `resize_to_fit' for #<ImageUploader::Uploader70338622065800:0x007ff1f0f852e8>):
+  
+app/controllers/recipes_controller.rb:24:in `create'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (3.0ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.6ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.5ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (81.8ms)
+Started GET "/recipes" for ::1 at 2017-05-13 16:55:49 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 53ms (Views: 50.1ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E" for ::1 at 2017-05-13 16:55:49 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (1.2ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (9.4ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.1ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.4ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (125.4ms)
+Started GET "/recipes/new" for ::1 at 2017-05-13 16:58:26 +0900
+Started GET "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E" for ::1 at 2017-05-13 16:58:26 +0900
+Processing by RecipesController#new as HTML
+  
+  [1m[36mUser Load (5.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+ActionController::RoutingError (No route matches [GET] "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (40.6ms)
+Completed 200 OK in 157ms (Views: 103.5ms | ActiveRecord: 5.8ms)
+
+
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (21.2ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (3.1ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.3ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (141.8ms)
+Started GET "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E" for ::1 at 2017-05-13 16:58:31 +0900
+  
+ActionController::RoutingError (No route matches [GET] "/uploads/recipe/image/24/%23%3CActionDispatch%3A%3AHttp%3A%3AUploadedFile%3A0x007fe08daff378%3E"):
+  
+actionpack (5.0.2) lib/action_dispatch/middleware/debug_exceptions.rb:53:in `call'
+web-console (3.5.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.5.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `catch'
+web-console (3.5.0) lib/web_console/middleware.rb:18:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/show_exceptions.rb:31:in `call'
+railties (5.0.2) lib/rails/rack/logger.rb:36:in `call_app'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `block in call'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `block in tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:26:in `tagged'
+activesupport (5.0.2) lib/active_support/tagged_logging.rb:69:in `tagged'
+railties (5.0.2) lib/rails/rack/logger.rb:24:in `call'
+sprockets-rails (3.2.0) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/request_id.rb:24:in `call'
+rack (2.0.2) lib/rack/method_override.rb:22:in `call'
+rack (2.0.2) lib/rack/runtime.rb:22:in `call'
+activesupport (5.0.2) lib/active_support/cache/strategy/local_cache_middleware.rb:28:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/executor.rb:12:in `call'
+actionpack (5.0.2) lib/action_dispatch/middleware/static.rb:136:in `call'
+rack (2.0.2) lib/rack/sendfile.rb:111:in `call'
+railties (5.0.2) lib/rails/engine.rb:522:in `call'
+rack (2.0.2) lib/rack/handler/webrick.rb:86:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:140:in `service'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/httpserver.rb:96:in `run'
+/Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/2.3.0/webrick/server.rb:296:in `block in start_thread'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.2ms)
+  Rendered collection of /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [37 times] (13.0ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (2.3ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (3.0ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/routing_error.html.erb within rescues/layout (120.6ms)
+Started GET "/" for ::1 at 2017-05-13 17:39:51 +0900
+  [1m[36mActiveRecord::SchemaMigration Load (11.0ms)[0m  [1m[34mSELECT `schema_migrations`.* FROM `schema_migrations`[0m
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (5.0ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (111.1ms)
+Completed 200 OK in 447ms (Views: 380.4ms | ActiveRecord: 28.3ms)
+
+
+Started GET "/recipes/new" for ::1 at 2017-05-13 17:54:25 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (2.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (34.7ms)
+Completed 200 OK in 289ms (Views: 173.3ms | ActiveRecord: 9.6ms)
+
+
+Started POST "/recipes" for ::1 at 2017-05-13 17:58:41 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yY3LXwBAs9+NQWez8vhAawWewziiSdeGGvbv2Axos4pxPqul3UYeepCk6Udbg5dTAJCpnzzxyJ3fHFnpQUgxUw==", "recipe"=>{"title"=>"うどん！！！", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f92b6ad6150 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46802-bwdyk3.jpg>, @original_filename="0142.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"0142.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"野菜たっぷり美味しいうどん", "materials_attributes"=>{"0"=>{"name"=>"うどん", "quantity"=>"１玉"}, "1"=>{"name"=>"鰹節", "quantity"=>"適量"}, "2"=>{"name"=>"めんつゆ", "quantity"=>""}, "3"=>{"name"=>"オクラ", "quantity"=>""}, "4"=>{"name"=>"レタス", "quantity"=>""}, "5"=>{"name"=>"", "quantity"=>""}, "6"=>{"name"=>"", "quantity"=>""}}, "steps_attributes"=>{"0"=>{"body"=>"うどんを茹でます。"}, "1"=>{"body"=>"野菜を茹でます。"}, "2"=>{"body"=>""}, "3"=>{"body"=>""}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (2.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (6.5ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('うどん！！！', '0142.jpg', '野菜たっぷり美味しいうどん', '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (10.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('うどん', '１玉', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('鰹節', '適量', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (1.8ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('めんつゆ', '', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('オクラ', '', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('レタス', '', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', '', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', '', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (3.8ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('うどんを茹でます。', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('野菜を茹でます。', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', 25, '2017-05-13 08:58:43', '2017-05-13 08:58:43')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 3659ms (ActiveRecord: 30.5ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 17:58:45 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (1.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 25[0m
+  Rendered recipes/index.html.haml within layouts/application (52.3ms)
+Completed 200 OK in 112ms (Views: 105.9ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:02:03 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.8ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (75.2ms)
+Completed 200 OK in 149ms (Views: 135.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:03:07 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (23.9ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (70.9ms)
+Completed 200 OK in 129ms (Views: 101.3ms | ActiveRecord: 24.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:03:09 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (26.7ms)
+Completed 200 OK in 67ms (Views: 63.3ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:04:16 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 24[0m
+  Rendered recipes/index.html.haml within layouts/application (33.2ms)
+Completed 200 OK in 73ms (Views: 69.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:04:31 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  Rendered recipes/index.html.haml within layouts/application (27.8ms)
+Completed 200 OK in 65ms (Views: 61.3ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:04:32 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  Rendered recipes/index.html.haml within layouts/application (43.4ms)
+Completed 200 OK in 72ms (Views: 67.1ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:05:36 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  Rendered recipes/index.html.haml within layouts/application (21.1ms)
+Completed 200 OK in 56ms (Views: 53.9ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/recipes/new" for ::1 at 2017-05-13 18:05:46 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (19.1ms)
+Completed 200 OK in 68ms (Views: 55.4ms | ActiveRecord: 0.8ms)
+
+
+Started POST "/recipes" for ::1 at 2017-05-13 18:10:03 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xR1ErLShQJRK7lc5yfB2tdx9mZ3RopcZqB2ayvp1y6V9riRWaaftMVcL2c1gi6GN2XPzOk8aiAJt9yz7t1VJfA==", "recipe"=>{"title"=>"絶品specialカレー💫🌟", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f92b2728ef8 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46802-4miol0.jpg>, @original_filename="20160804204526.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"20160804204526.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"カンタン！美味しい！！✨", "materials_attributes"=>{"0"=>{"name"=>"ジャガイモ", "quantity"=>"１個"}, "1"=>{"name"=>"にんじん", "quantity"=>"１本"}, "2"=>{"name"=>"玉ねぎ", "quantity"=>"１玉"}, "3"=>{"name"=>"牛肉", "quantity"=>"300g"}, "4"=>{"name"=>"カレー粉", "quantity"=>"１箱"}, "5"=>{"name"=>"水", "quantity"=>"１リットル"}, "6"=>{"name"=>"コショウ", "quantity"=>"適量"}}, "steps_attributes"=>{"0"=>{"body"=>"まず、材料を好みの大きさに切ります！そして炒めます！"}, "1"=>{"body"=>"食材に火が通ったら、水を鍋に入れます！"}, "2"=>{"body"=>"１５分ほど煮込んだら、アクをとってカレー粉を入れましょう！！"}, "3"=>{"body"=>"盛り付けて完成！お好みでソースをかけてね！"}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (5.6ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('絶品specialカレー💫🌟', '20160804204526.jpg', 'カンタン！美味しい！！✨', '2017-05-13 09:10:04', '2017-05-13 09:10:04')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 761ms (ActiveRecord: 6.6ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect string value: '\xF0\x9F\x92\xAB\xF0\x9F...' for column 'title' at row 1: INSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('絶品specialカレー💫🌟', '20160804204526.jpg', 'カンタン！美味しい！！✨', '2017-05-13 09:10:04', '2017-05-13 09:10:04')):
+  
+app/controllers/recipes_controller.rb:26:in `create'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.4ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.6ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (4.5ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (98.3ms)
+Started POST "/recipes" for ::1 at 2017-05-13 18:10:24 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yo3hCB/Os+2lmjErqsqOU5p0vw4QobTs9Ju9XIYtDPf2R2S+f3JAT/h78jNx5E+bUNEZYS84OO0mSeHYAIEeRA==", "recipe"=>{"title"=>"絶品specialカレー🌟", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f92bacb0a30 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46802-1jfbuqz.jpg>, @original_filename="20160804204526.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"20160804204526.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"カンタン！美味しい！！", "materials_attributes"=>{"0"=>{"name"=>"ジャガイモ", "quantity"=>"１個"}, "1"=>{"name"=>"にんじん", "quantity"=>"１本"}, "2"=>{"name"=>"玉ねぎ", "quantity"=>"１玉"}, "3"=>{"name"=>"牛肉", "quantity"=>"300g"}, "4"=>{"name"=>"カレー粉", "quantity"=>"１箱"}, "5"=>{"name"=>"水", "quantity"=>"１リットル"}, "6"=>{"name"=>"コショウ", "quantity"=>"適量"}}, "steps_attributes"=>{"0"=>{"body"=>"まず、材料を好みの大きさに切ります！そして炒めます！"}, "1"=>{"body"=>"食材に火が通ったら、水を鍋に入れます！"}, "2"=>{"body"=>"１５分ほど煮込んだら、アクをとってカレー粉を入れましょう！！"}, "3"=>{"body"=>"盛り付けて完成！お好みでソースをかけてね！"}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('絶品specialカレー🌟', '20160804204526.jpg', 'カンタン！美味しい！！', '2017-05-13 09:10:24', '2017-05-13 09:10:24')[0m
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 825ms (ActiveRecord: 1.4ms)
+
+
+  
+ActiveRecord::StatementInvalid (Mysql2::Error: Incorrect string value: '\xF0\x9F\x8C\x9F' for column 'title' at row 1: INSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('絶品specialカレー🌟', '20160804204526.jpg', 'カンタン！美味しい！！', '2017-05-13 09:10:24', '2017-05-13 09:10:24')):
+  
+app/controllers/recipes_controller.rb:26:in `create'
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_source.html.erb (4.8ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (2.7ms)
+  Rendering /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (2.7ms)
+  Rendered /Users/ryotak/.rbenv/versions/2.3.1/lib/ruby/gems/2.3.0/gems/actionpack-5.0.2/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (89.2ms)
+Started POST "/recipes" for ::1 at 2017-05-13 18:10:45 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Yo3hCB/Os+2lmjErqsqOU5p0vw4QobTs9Ju9XIYtDPf2R2S+f3JAT/h78jNx5E+bUNEZYS84OO0mSeHYAIEeRA==", "recipe"=>{"title"=>"絶品specialカレー", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f92b69a2900 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46802-tuzm0i.jpg>, @original_filename="20160804204526.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"20160804204526.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"カンタン！美味しい！！", "materials_attributes"=>{"0"=>{"name"=>"ジャガイモ", "quantity"=>"１個"}, "1"=>{"name"=>"にんじん", "quantity"=>"１本"}, "2"=>{"name"=>"玉ねぎ", "quantity"=>"１玉"}, "3"=>{"name"=>"牛肉", "quantity"=>"300g"}, "4"=>{"name"=>"カレー粉", "quantity"=>"１箱"}, "5"=>{"name"=>"水", "quantity"=>"１リットル"}, "6"=>{"name"=>"コショウ", "quantity"=>"適量"}}, "steps_attributes"=>{"0"=>{"body"=>"まず、材料を好みの大きさに切ります！そして炒めます！"}, "1"=>{"body"=>"食材に火が通ったら、水を鍋に入れます！"}, "2"=>{"body"=>"１５分ほど煮込んだら、アクをとってカレー粉を入れましょう！！"}, "3"=>{"body"=>"盛り付けて完成！お好みでソースをかけてね！"}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.2ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('絶品specialカレー', '20160804204526.jpg', 'カンタン！美味しい！！', '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('ジャガイモ', '１個', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('にんじん', '１本', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (2.5ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('玉ねぎ', '１玉', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('牛肉', '300g', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('カレー粉', '１箱', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('水', '１リットル', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('コショウ', '適量', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('まず、材料を好みの大きさに切ります！そして炒めます！', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('食材に火が通ったら、水を鍋に入れます！', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('１５分ほど煮込んだら、アクをとってカレー粉を入れましょう！！', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('盛り付けて完成！お好みでソースをかけてね！', 26, '2017-05-13 09:10:46', '2017-05-13 09:10:46')[0m
+  [1m[35m (1.8ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1930ms (ActiveRecord: 8.8ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:10:47 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (1.2ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  Rendered recipes/index.html.haml within layouts/application (24.8ms)
+Completed 200 OK in 67ms (Views: 63.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/recipes/new" for ::1 at 2017-05-13 18:11:45 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 61ms (Views: 48.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/recipes" for ::1 at 2017-05-13 18:14:17 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SpS6O/QJdMBPjDdVmTRdsfLqfyWQq0zcGUD/HWjK3J7yJ9rBKQ/ZZVJpuaEwT4qJ9+QVgg4TU8fcqkksJepeRw==", "recipe"=>{"title"=>"店長仕込みの焼きそば！", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f92b229d208 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46802-1xbwq0s.jpg>, @original_filename="search.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"search.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"たったの３分！", "materials_attributes"=>{"0"=>{"name"=>"麺", "quantity"=>"お好みで"}, "1"=>{"name"=>"玉ねぎ", "quantity"=>"お好みで"}, "2"=>{"name"=>"ソース", "quantity"=>"お好みで"}, "3"=>{"name"=>"豚肉", "quantity"=>"お好みで"}, "4"=>{"name"=>"", "quantity"=>""}, "5"=>{"name"=>"", "quantity"=>""}, "6"=>{"name"=>"", "quantity"=>""}}, "steps_attributes"=>{"0"=>{"body"=>"食材を適当な大きさに切ります"}, "1"=>{"body"=>"テスト"}, "2"=>{"body"=>"テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト"}, "3"=>{"body"=>"テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト２"}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('店長仕込みの焼きそば！', 'search.jpg', 'たったの３分！', '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (3.1ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('麺', 'お好みで', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('玉ねぎ', 'お好みで', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('ソース', 'お好みで', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('豚肉', 'お好みで', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', '', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', '', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', '', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('食材を適当な大きさに切ります', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('テスト', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('テストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテストテスト２', 27, '2017-05-13 09:14:18', '2017-05-13 09:14:18')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1597ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:14:19 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  Rendered recipes/index.html.haml within layouts/application (20.6ms)
+Completed 200 OK in 52ms (Views: 48.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:14:35 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  Rendered recipes/index.html.haml within layouts/application (15.9ms)
+Completed 200 OK in 39ms (Views: 34.6ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/recipes/new" for ::1 at 2017-05-13 18:15:04 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (13.6ms)
+Completed 200 OK in 57ms (Views: 45.4ms | ActiveRecord: 0.3ms)
+
+
+Started POST "/recipes" for ::1 at 2017-05-13 18:16:59 +0900
+Processing by RecipesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JFZTIGuRt2r33KrWpUCV+C441HPE+0ROVH1W/IRD+r2c5TPatpcaz+o5JCIMO0LAKza+1FpDW1WRl+DNyWN4ZA==", "recipe"=>{"title"=>"おふくろの味！肉じゃが！", "image"=>#<ActionDispatch::Http::UploadedFile:0x007f92ba95b0b0 @tempfile=#<Tempfile:/var/folders/ys/3lhxb1_51p57f4zd_98jpj7w0000gn/T/RackMultipart20170513-46802-tcvfvl.jpg>, @original_filename="search-1.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"recipe[image]\"; filename=\"search-1.jpg\"\r\nContent-Type: image/jpeg\r\n">, "point"=>"懐かしいおふくろの味！！！！！", "materials_attributes"=>{"0"=>{"name"=>"ジャガイモ", "quantity"=>""}, "1"=>{"name"=>"にんじん", "quantity"=>""}, "2"=>{"name"=>"玉ねぎ", "quantity"=>""}, "3"=>{"name"=>"醤油", "quantity"=>""}, "4"=>{"name"=>"砂糖", "quantity"=>""}, "5"=>{"name"=>"みりん", "quantity"=>""}, "6"=>{"name"=>"", "quantity"=>""}}, "steps_attributes"=>{"0"=>{"body"=>"手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト"}, "1"=>{"body"=>"手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト"}, "2"=>{"body"=>"手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト"}, "3"=>{"body"=>"手順テスト手順テスト手順テスト手順テスト"}}}, "commit"=>"レシピを投稿する"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (1.4ms)[0m  [1m[32mINSERT INTO `recipes` (`title`, `image`, `point`, `created_at`, `updated_at`) VALUES ('おふくろの味！肉じゃが！', 'search-1.jpg', '懐かしいおふくろの味！！！！！', '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('ジャガイモ', '', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('にんじん', '', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('玉ねぎ', '', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('醤油', '', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('砂糖', '', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('みりん', '', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `materials` (`name`, `quantity`, `recipe_id`, `created_at`, `updated_at`) VALUES ('', '', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト手順テスト', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35mSQL (0.2ms)[0m  [1m[32mINSERT INTO `steps` (`body`, `recipe_id`, `created_at`, `updated_at`) VALUES ('手順テスト手順テスト手順テスト手順テスト', 28, '2017-05-13 09:17:00', '2017-05-13 09:17:00')[0m
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/
+Completed 302 Found in 1538ms (ActiveRecord: 7.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-13 18:17:01 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 1 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.2ms)[0m  [1m[34mSELECT `recipes`.* FROM `recipes`[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 28[0m
+  Rendered recipes/index.html.haml within layouts/application (36.4ms)
+Completed 200 OK in 86ms (Views: 82.2ms | ActiveRecord: 1.4ms)
+
+

@@ -1,0 +1,106 @@
+.new-recipe{
+  height: 820px;
+  width: 640px;
+  background-color: #fafafa;
+  margin: 20px;
+  border: solid 1px #D2B48C;
+  border-radius: 5px
+}
+.new-recipe-form{
+  margin: 20px;
+}
+
+.recipe__titie{
+  p { font-size: 20px;
+      color : #889b00;
+      font-weight: 600;
+  }
+}
+.recipe__titie-form{
+  height: 30px;
+  width: 280px;
+  margin-top: 15px;
+}
+
+.recipe__image{
+  height: 400px;
+  width: 280px;
+  margin-top: 20px;
+  float: left;
+  border: solid 1px #D2B48C;
+}
+
+.recipe-image__upload{
+}
+
+.new-recipe-form-upper-right{
+  float:right;
+}
+
+.recipe__catch-copy{
+  margin-top: 15px;
+  margin-right: 10px;
+  float:right;
+  p { font-size: 15px;
+      color : #889b00;
+    }
+}
+
+.catch-copy-form{
+  height: 60px;
+  width: 288px;
+}
+
+.recipe__materials{
+  display: block;
+  p { font-size: 15px;
+      color : #889b00;
+    }
+  float:left;
+  clear:both;
+  li{list-style-type: none;}
+}
+
+.recipe__steps{
+  height: 215px;
+  width: 600px;
+  // background-color: #D2B48C;
+  margin-top: 434px;
+  li{list-style-type: none;
+    }
+  p { font-size: 15px;
+      color : #889b00;
+    }
+}
+
+.step-form{
+  height: 40px;
+  width: 590px;
+  // float: right;
+  margin-top: 5px;
+
+}
+
+.submit-button{
+  float: right;
+  margin-right: 25px;
+  margin-top: 20px;
+  width: 160px;
+  border-radius: 5px ;
+  // box-shadow: 3px 3px 3px 3px #FF9933;
+  // -webkit-transition: none;
+  // text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
+  color: white;
+  background-color: #FF9933;
+  font-size: 16px;
+
+}
+// .submit-button:hover {
+//   background-color: #FF9933;
+//   box-shadow: 0 3px 0 #FF9933;
+// }
+// .button:active {
+//   top: 3px;
+//   box-shadow: none;
+// }
+

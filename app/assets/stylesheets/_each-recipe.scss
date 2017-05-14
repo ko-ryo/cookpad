@@ -1,0 +1,84 @@
+.each-recipe{
+  height: 780px;
+  width: 640px;
+  background-color: #ffffff;
+  margin: 20px;
+  border: solid 1px #ded5c0;
+  border-radius: 5px;
+}
+
+
+.each-recipe-pad{
+  padding : 15px 25px;
+}
+.each-recipe__title{
+  p { font-size: 25px;
+      color : #889b00;
+      font-weight: 600;
+  }
+}
+
+.each-recipe-upper{
+  height: 440px;
+  width: 580px;
+  padding-top: 10px;
+}
+
+.each-recipe-upper__image{
+  float: left;
+}
+
+.each-recipe-upper__catch-copy{
+  float: left;
+  padding-left: 15px;
+  height: 120px;
+  width: 280px;
+  display: block;
+  line-height: 25px;
+  font-weight: 300;
+}
+
+.each-recipe-upper__materials{
+  height: 250px;
+  width: 280px;
+  margin-left: 15px;
+  display: block;
+  float: left;
+  line-height: 30px;
+  font-weight: 300;
+  li{list-style-type: none;}
+  .material{ color: #E0D7C1;
+             font-size: 20px;
+             padding-bottom: 10px;
+             font-weight: 500;
+
+  }
+}
+.each-recipe-upper__materials-name{
+  border-bottom: solid 1px #E5E5E5;
+}
+
+.each-recipe-upper__materials-quantity {
+  float: right;
+  margin-top: -30px;
+  border-bottom: solid 1px #E5E5E5;
+}
+.each-recipe-bottom{
+  height: 250px;
+  width: 580px;
+}
+
+.step-number{
+  letter-spacing: 132px;
+  color : #E0D7C1;
+  font-size: 20px;
+  font-weight: 300;
+}
+
+.each-recipe-bottom__step{
+  height: 250px;
+  width: 145px;
+  float: left;
+  padding: 0 10px 0 0;
+  font-weight: 300;
+}

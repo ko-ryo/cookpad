@@ -3,36 +3,28 @@ class RecipesController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    @recipe = Recipe.new
-    @recipes = Recipe.all
-    # binding.pry
-  end
-
-  def show
+    # @recipes = Recipe.all
+    @recipes = Recipe.order("created_at DESC").page(params[:page]).per(5)
   end
 
   def new
     @recipe = Recipe.new
-    # @material = Material.new
-    # @step = Step.new
     7.times { @recipe.materials.build }
     4.times { @recipe.steps.build }
   end
 
   def create
-    # binding.pry
     @recipe = Recipe.new(recipe_params)
-
     @recipe.save
     redirect_to root_path
+  end
 
-    # @step.save
-    # @material.save
+  def search
+    @recipes = Recipe.where('title LIKE(?)', "%#{params[:title]}%").limit(5)
+  end
 
-    # @recipe.materials.build
-    # @recipe.steps.build
-    # @recipe.create
-
+  def show
+    @recipe = Recipe.find(params[:id])
   end
 
   private

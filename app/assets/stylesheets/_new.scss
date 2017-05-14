@@ -1,16 +1,16 @@
 .new-recipe{
   height: 820px;
   width: 640px;
-  background-color: #fafafa;
+  background-color: #ffffff;
   margin: 20px;
-  border: solid 1px #D2B48C;
+  border: solid 1px #ded5c0;
   border-radius: 5px
 }
 .new-recipe-form{
   margin: 20px;
 }
 
-.recipe__titie{
+.recipe__title{
   p { font-size: 20px;
       color : #889b00;
       font-weight: 600;
@@ -27,7 +27,7 @@
   width: 280px;
   margin-top: 20px;
   float: left;
-  border: solid 1px #D2B48C;
+  border: solid 1px #ded5c0;
 }
 
 .recipe-image__upload{

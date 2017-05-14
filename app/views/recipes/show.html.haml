@@ -1,0 +1,23 @@
+.each-recipe
+  .each-recipe-pad
+    .each-recipe__title
+      %p #{@recipe.title}
+    .each-recipe-upper
+      .each-recipe-upper__image
+        =image_tag @recipe.image.to_s, size: "280x400"
+      .each-recipe-upper__catch-copy
+        %p #{@recipe.point}
+      .each-recipe-upper__materials
+        %p.material 材料
+        - @recipe.materials.each do |material|
+          .each-recipe-upper__materials-name
+            %li
+              %p #{material.name}
+              %p.each-recipe-upper__materials-quantity #{material.quantity}
+    .each-recipe-bottom
+      .each-recipe-bottom__number
+      %p.step-number 1234
+      - @recipe.steps.each do |step|
+        .each-recipe-bottom__steps
+          .each-recipe-bottom__step
+            %p #{step.body}

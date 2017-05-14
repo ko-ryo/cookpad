@@ -1,6 +1,5 @@
-# CarrierWave.configure do |config|
-#   config.asset_host = Settings.url
-# end
+require 'dotenv'
+Dotenv.load
 
 CarrierWave.configure do |config|
   config.fog_provider = 'fog'

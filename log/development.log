@@ -26229,3 +26229,218 @@ Processing by RecipesController#show as HTML
 Completed 200 OK in 51ms (Views: 43.0ms | ActiveRecord: 2.6ms)
 
 
+Started GET "/recipes" for ::1 at 2017-05-14 19:33:24 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 41[0m
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 40[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 39[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 28[0m
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  Rendered recipes/index.html.haml within layouts/application (131.2ms)
+Completed 200 OK in 312ms (Views: 276.0ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/recipes" for ::1 at 2017-05-14 19:33:25 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 41[0m
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 40[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 39[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 28[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  Rendered recipes/index.html.haml within layouts/application (71.9ms)
+Completed 200 OK in 117ms (Views: 110.6ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/?page=2" for ::1 at 2017-05-14 19:33:29 +0900
+Processing by RecipesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  Rendered recipes/index.html.haml within layouts/application (60.7ms)
+Completed 200 OK in 91ms (Views: 86.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/recipes/new" for ::1 at 2017-05-14 19:33:33 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (17.4ms)
+Completed 200 OK in 93ms (Views: 67.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/recipes/41" for ::1 at 2017-05-14 19:33:38 +0900
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 41 LIMIT 1[0m
+  Rendering recipes/show.html.haml within layouts/application
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 41[0m
+  [1m[36mStep Load (0.8ms)[0m  [1m[34mSELECT `steps`.* FROM `steps` WHERE `steps`.`recipe_id` = 41[0m
+  Rendered recipes/show.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 71ms (Views: 59.8ms | ActiveRecord: 4.6ms)
+
+
+Started GET "/recipes/28" for ::1 at 2017-05-14 19:33:42 +0900
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"28"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 28 LIMIT 1[0m
+  Rendering recipes/show.html.haml within layouts/application
+  [1m[36mMaterial Load (0.5ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 28[0m
+  [1m[36mStep Load (0.5ms)[0m  [1m[34mSELECT `steps`.* FROM `steps` WHERE `steps`.`recipe_id` = 28[0m
+  Rendered recipes/show.html.haml within layouts/application (21.3ms)
+Completed 200 OK in 56ms (Views: 50.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/?page=2" for ::1 at 2017-05-14 19:34:07 +0900
+Processing by RecipesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.5ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  Rendered recipes/index.html.haml within layouts/application (75.0ms)
+Completed 200 OK in 112ms (Views: 106.7ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/edit" for ::1 at 2017-05-14 19:34:17 +0900
+Processing by Devise::RegistrationsController#edit as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering devise/registrations/edit.html.haml within layouts/application
+  Rendered devise/registrations/edit.html.haml within layouts/application (23.7ms)
+Completed 200 OK in 58ms (Views: 53.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for ::1 at 2017-05-14 19:34:29 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.3ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 41[0m
+  [1m[36mMaterial Load (0.7ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 40[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 39[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 28[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  Rendered recipes/index.html.haml within layouts/application (77.0ms)
+Completed 200 OK in 107ms (Views: 100.1ms | ActiveRecord: 3.8ms)
+
+
+Started GET "/recipes/41" for ::1 at 2017-05-14 19:34:42 +0900
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"41"}
+  [1m[36mUser Load (5.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (2.1ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 41 LIMIT 1[0m
+  Rendering recipes/show.html.haml within layouts/application
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 41[0m
+  [1m[36mStep Load (0.6ms)[0m  [1m[34mSELECT `steps`.* FROM `steps` WHERE `steps`.`recipe_id` = 41[0m
+  Rendered recipes/show.html.haml within layouts/application (14.2ms)
+Completed 200 OK in 68ms (Views: 50.7ms | ActiveRecord: 8.8ms)
+
+
+Started GET "/?page=2" for ::1 at 2017-05-14 19:34:45 +0900
+Processing by RecipesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[36mMaterial Load (0.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  Rendered recipes/index.html.haml within layouts/application (71.4ms)
+Completed 200 OK in 106ms (Views: 95.0ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/recipes/new" for ::1 at 2017-05-14 19:34:48 +0900
+Processing by RecipesController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/new.html.haml within layouts/application
+  Rendered recipes/new.html.haml within layouts/application (17.7ms)
+Completed 200 OK in 72ms (Views: 57.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/recipes/39" for ::1 at 2017-05-14 19:41:48 +0900
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"39"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 39 LIMIT 1[0m
+  Rendering recipes/show.html.haml within layouts/application
+  [1m[36mMaterial Load (1.0ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 39[0m
+  [1m[36mStep Load (0.7ms)[0m  [1m[34mSELECT `steps`.* FROM `steps` WHERE `steps`.`recipe_id` = 39[0m
+  Rendered recipes/show.html.haml within layouts/application (41.1ms)
+Completed 200 OK in 129ms (Views: 96.4ms | ActiveRecord: 4.0ms)
+
+
+Started GET "/recipes/27" for ::1 at 2017-05-14 19:41:54 +0900
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"27"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 27 LIMIT 1[0m
+  Rendering recipes/show.html.haml within layouts/application
+  [1m[36mMaterial Load (1.3ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  [1m[36mStep Load (0.3ms)[0m  [1m[34mSELECT `steps`.* FROM `steps` WHERE `steps`.`recipe_id` = 27[0m
+  Rendered recipes/show.html.haml within layouts/application (26.2ms)
+Completed 200 OK in 74ms (Views: 65.9ms | ActiveRecord: 3.1ms)
+
+
+Started GET "/recipes/search?utf8=%E2%9C%93&title=%E3%81%86&commit=%E6%A4%9C%E7%B4%A2" for ::1 at 2017-05-14 19:45:30 +0900
+Processing by RecipesController#search as HTML
+  Parameters: {"utf8"=>"✓", "title"=>"う", "commit"=>"検索"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  Rendering recipes/search.html.haml within layouts/application
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` WHERE (title LIKE('%う%')) LIMIT 5[0m
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 40[0m
+  Rendered recipes/search.html.haml within layouts/application (30.3ms)
+Completed 200 OK in 75ms (Views: 67.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/recipes" for ::1 at 2017-05-14 20:03:08 +0900
+Processing by RecipesController#index as HTML
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (1.7ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.8ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 0[0m
+  [1m[36mMaterial Load (1.2ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 41[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 40[0m
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 39[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 28[0m
+  [1m[36mMaterial Load (0.6ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 27[0m
+  Rendered recipes/index.html.haml within layouts/application (202.3ms)
+Completed 200 OK in 271ms (Views: 249.5ms | ActiveRecord: 6.4ms)
+
+
+Started GET "/?page=2" for ::1 at 2017-05-14 20:03:12 +0900
+Processing by RecipesController#index as HTML
+  Parameters: {"page"=>"2"}
+  Rendering recipes/index.html.haml within layouts/application
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT COUNT(*) FROM `recipes`[0m
+  [1m[36mRecipe Load (0.4ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` ORDER BY created_at DESC LIMIT 5 OFFSET 5[0m
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  Rendered recipes/index.html.haml within layouts/application (168.3ms)
+Completed 200 OK in 200ms (Views: 196.4ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/recipes/26" for ::1 at 2017-05-14 20:03:13 +0900
+Processing by RecipesController#show as HTML
+  Parameters: {"id"=>"26"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  `users`.* FROM `users` WHERE `users`.`id` = 4 ORDER BY `users`.`id` ASC LIMIT 1[0m
+  [1m[36mRecipe Load (0.6ms)[0m  [1m[34mSELECT  `recipes`.* FROM `recipes` WHERE `recipes`.`id` = 26 LIMIT 1[0m
+  Rendering recipes/show.html.haml within layouts/application
+  [1m[36mMaterial Load (0.4ms)[0m  [1m[34mSELECT `materials`.* FROM `materials` WHERE `materials`.`recipe_id` = 26[0m
+  [1m[36mStep Load (0.9ms)[0m  [1m[34mSELECT `steps`.* FROM `steps` WHERE `steps`.`recipe_id` = 26[0m
+  Rendered recipes/show.html.haml within layouts/application (18.1ms)
+Completed 200 OK in 68ms (Views: 58.0ms | ActiveRecord: 2.3ms)
+
+

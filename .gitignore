@@ -13,3 +13,6 @@
 /tmp
 .env
 /image
+.tmp
+vendor
+log/

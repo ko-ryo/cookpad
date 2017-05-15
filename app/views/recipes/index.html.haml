@@ -14,7 +14,6 @@
   .nav-user
     .nav-user-button
       = link_to "設定", edit_user_registration_path
-      %p 設定
   - if user_signed_in?
     .nav-login
       %p ログイン中:#{current_user.name}
@@ -40,7 +39,7 @@
         .main-recipe-right.clearfix
           =link_to "#{recipe.title}",recipe_path(recipe.id),class: "main-recipe-right__title"
           .main-recipe-right__user
-            %p takashi
+            %p #{"by" + recipe.user.name}
           .main-recipe-right__point
             %p=recipe.point
           .main-recipe-right__materials

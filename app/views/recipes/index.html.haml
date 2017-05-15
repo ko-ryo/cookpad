@@ -1,6 +1,6 @@
 .nav
-  %a.nav-company-name{ href: recipes_path }
-    %p cookpad
+  .nav-company-name
+    = link_to "cookpad", recipes_path
   .nav-search
     = form_tag search_recipes_path, method: :get do |f|
       .nav-search-form
@@ -9,17 +9,18 @@
         = submit_tag '検索', :title => nil, class: "search-button"
   .nav-post
     - if user_signed_in?
-      %a.nav-post-button{ href: new_recipe_path }
-        %p レシピを書く
+      .nav-post-button
+        = link_to "レシピを書く", new_recipe_path
   .nav-user
-    %a.nav-user-button{ href: edit_user_registration_path }
+    .nav-user-button
+      = link_to "設定", edit_user_registration_path
       %p 設定
   - if user_signed_in?
     .nav-login
       %p ログイン中:#{current_user.name}
   - else
-    %a.nav-login{ href: new_user_session_path }
-      %p 新規登録
+    .nav-login
+      = link_to "新規登録", new_user_session_path
 
 .side-bar.clearfix
   .side-bar-recipe
@@ -38,10 +39,8 @@
           =image_tag recipe.image.to_s, size: "100x140"
         .main-recipe-right.clearfix
           =link_to "#{recipe.title}",recipe_path(recipe.id),class: "main-recipe-right__title"
-          / .main-recipe-right__title{ href: recipe_path(recipe.id)}
-          /   %p=recipe.title
           .main-recipe-right__user
-            %p #{" by " + recipe.user.name}
+            %p #{"by" + recipe.user.name}
           .main-recipe-right__point
             %p=recipe.point
           .main-recipe-right__materials

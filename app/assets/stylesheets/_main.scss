@@ -48,16 +48,16 @@
   margin-left: -10px;
   float:left;
   p{font-size: 22px;}
+  overflow:hidden;
 }
 .main-recipe-right__user{
   float: left;
   padding-left: 22px;
-  padding-top: 30px;
+  padding-top: 22px;
   p{font-size: 12px;
-    color : gray;
+    color : #4d2200;
     }
   desplay:block;
-  width:400px;
 }
 .main-recipe-right__point{
   padding-top: 10px;
@@ -73,8 +73,18 @@
   padding-top: 10px;
   float:left;
   margin-left: -10px;
-  p{ color: #D2691E;
+  p{ color: #cfaa80;
      font-size: 14px;
      padding-left: 10px;
     }
+}
+.each-materials{
+  p{ color: #cfaa80;
+     font-size: 14px;
+     padding-left: 10px;
+     float:right;
+     padding-right: 15px;
+
+    }
+    display: inline;
 }

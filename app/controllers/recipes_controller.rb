@@ -3,8 +3,9 @@ class RecipesController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    # @recipes = Recipe.all
-    @recipes = Recipe.order("created_at DESC").page(params[:page]).per(5)
+    # @recipes = Recipe.all #元々は
+    @recipes = Recipe.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    # binding.pry
   end
 
   def new
@@ -16,6 +17,7 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.save
+    # binding.pry
     redirect_to root_path
   end
 
@@ -33,7 +35,7 @@ class RecipesController < ApplicationController
   end
 
   def recipe_params
-    params.require(:recipe).permit(:title, :image, :point,materials_attributes: [:name, :quantity],steps_attributes: [:body])
+    params.require(:recipe).permit(:title, :image, :point,materials_attributes: [:name, :quantity],steps_attributes: [:body]).merge(user_id: current_user.id)
   end
 
 end

@@ -31,7 +31,7 @@
     .main-recipes-info.clearfix
       .main-recipes-info__navi 絞り込み:<strong>すべて</strong>主食 おかず スープ お菓子 その他
       .main-recipes-info__page
-      .main-recipes-info__page-next= paginate(@recipes)
+      .main-recipes-info__page-next= paginate(@recipes) if @recipes.length >= 5
     - @recipes.each do |recipe|
       .main-recipe.clearfix
         .main-recipe__image
@@ -40,11 +40,13 @@
           %a.main-recipe-right__title{ href: recipe_path(recipe.id)}
             %p=recipe.title
           .main-recipe-right__user
-            %p by りょうた
+            %p #{"  by  " + recipe.user.name}
           .main-recipe-right__point
             %p=recipe.point
           .main-recipe-right__materials
+            %p ○材料
             - recipe.materials.each do |material|
               .main-recipe-right__materials
-                %p #{material.name} 、
-  = paginate(@recipes)
+                .each-materials
+                  %p #{material.name}
+  = paginate(@recipes) if @recipes.length >= 5

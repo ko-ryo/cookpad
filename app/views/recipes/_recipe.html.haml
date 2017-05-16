@@ -10,9 +10,7 @@
     .main-recipe-right__likes
       = render partial: "likes/like", locals: { recipe: recipe }
     .main-recipe-right__user
-      %p=recipe.user.name unless recipe.blank?
     .main-recipe-right__point
-      %p=recipe.point unless recipe.blank?
     .main-recipe-right__materials
       %p ○材料
       - recipe.materials.each do |material|

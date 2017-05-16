@@ -4,8 +4,9 @@
   .main-recipe-right.clearfix
     = link_to "#{recipe.title}",recipe_path(recipe.id),class: "main-recipe-right__title"
     .main-recipe-right__delete
-      - if recipe.user_id == current_user.id
-        = link_to "削除", recipe_path(recipe.id), method: :delete
+      - if user_signed_in?
+        - if recipe.user_id == current_user.id
+          = link_to "削除", recipe_path(recipe.id), method: :delete
     .main-recipe-right__likes
       = render partial: "likes/like", locals: { recipe: recipe }
     .main-recipe-right__user

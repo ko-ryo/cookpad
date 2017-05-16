@@ -1,6 +1,6 @@
 .main{
   height: 972px;
-  min-width: 825px;
+  width: 822px;
   background-color: #f7f3e8;
   float: left;
   margin: 5px;
@@ -10,7 +10,6 @@
   overflow:hidden;
   p { font-size: 25px;
       color : #889b00;
-      background-color: #fafafa;
       border-bottom: 1px #889b00}
   }
 
@@ -24,35 +23,52 @@
 .main-recipes-info__page,.main-recipes-info__page-next{
   float:right;
   letter-spacing: 2px;
-  padding-top: 10px;
-  padding-right: 20px;
   color: gray;
 }
 
 .main-recipe{
   height: 160px;
-  width: 822px;
-  background-color: #fafafa;
-  margin: 10px 0;
+  width: 824px;
+  background-color: #ffffff;
+  margin: 5px 0;
+  float: left;
 }
 .main-recipe__image{
   height: 140px;
   width: 120px;
   margin: 0 10px;
-  padding: 10px 0;
+  padding: 10px 0 0 30px;
   float:left;
+}
+
+.main-recipe-right{
+  display:block;
+}
+
+.main-recipe-right__delete{
+  float:right;
+  margin-right: 25px;
+  margin-top: 12px;
+}
+
+.main-recipe-right__likes{
+  display: inline;
+  height: 15px;
+  float: right;
+  padding-right: 50px;
+  padding-top: 12px;
 }
 
 .main-recipe-right__title{
   margin-top: 10px;
-  margin-left: -10px;
+  margin-left: 20px;
   float:left;
   font-size: 22px;
   overflow:hidden;
 }
 .main-recipe-right__user{
   float: left;
-  padding-left: 22px;
+  margin-left: 25px;
   padding-top: 22px;
   p{font-size: 12px;
     color : #4d2200;
@@ -61,6 +77,7 @@
 }
 .main-recipe-right__point{
   padding-top: 10px;
+  padding-left: 40px;
   width:680px;
   float:left;
   display: block;
@@ -72,7 +89,7 @@
 .main-recipe-right__materials{
   padding-top: 10px;
   float:left;
-  margin-left: -10px;
+  margin-left: 20px;
   p{ color: #cfaa80;
      font-size: 14px;
      padding-left: 10px;
@@ -82,10 +99,9 @@
 .main-recipe-right__materials-name{
   padding-top: 10px;
   float:left;
-  margin-left: -10px;
+  margin-left: 5px;
   p{ color: #cfaa80;
      font-size: 14px;
-     padding-left: 10px;
     }
 }
 .each-materials{
@@ -94,7 +110,6 @@
      padding-left: 10px;
      float:right;
      padding-right: 15px;
-
     }
     display: inline;
 }

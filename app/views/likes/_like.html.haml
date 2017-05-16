@@ -1,0 +1,15 @@
+- if user_signed_in?
+  - if recipe.like_user(current_user.id)
+    = button_to recipe_like_path(recipe, Like.where(recipe_id: recipe.id, user_id: current_user.id)), method: :delete, id: "like-button", remote: true do
+      = image_tag("")
+      .likes-counter
+        = recipe.likes_count
+  - else
+    = button_to recipe_likes_path(recipe), id: "like-button", remote: true do
+      = image_tag("")
+      .likes-counter
+        = recipe.likes_count
+- else
+  = image_tag("")
+  .likes-counter
+    = recipe.likes_count

@@ -6,6 +6,7 @@
   border: solid 1px #ded5c0;
   border-radius: 5px
 }
+
 .new-recipe-form{
   margin: 20px;
 }
@@ -16,6 +17,7 @@
       font-weight: 600;
   }
 }
+
 .recipe__titie-form{
   height: 30px;
   width: 280px;
@@ -28,9 +30,6 @@
   margin-top: 20px;
   float: left;
   border: solid 1px #ded5c0;
-}
-
-.recipe-image__upload{
 }
 
 .new-recipe-form-upper-right{
@@ -64,7 +63,6 @@
 .recipe__steps{
   height: 215px;
   width: 600px;
-  // background-color: #D2B48C;
   margin-top: 434px;
   li{list-style-type: none;
     }
@@ -76,7 +74,6 @@
 .step-form{
   height: 40px;
   width: 590px;
-  // float: right;
   margin-top: 5px;
 
 }
@@ -87,20 +84,9 @@
   margin-top: 20px;
   width: 160px;
   border-radius: 5px ;
-  // box-shadow: 3px 3px 3px 3px #FF9933;
-  // -webkit-transition: none;
-  // text-shadow: 0 1px 1px rgba(0, 0, 0, .3);
   color: white;
   background-color: #FF9933;
   font-size: 16px;
-
 }
-// .submit-button:hover {
-//   background-color: #FF9933;
-//   box-shadow: 0 3px 0 #FF9933;
-// }
-// .button:active {
-//   top: 3px;
-//   box-shadow: none;
-// }
+
 

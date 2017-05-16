@@ -1,0 +1,19 @@
+.main-recipe.clearfix
+  .main-recipe__image
+    = image_tag recipe.image.to_s, size: "100x140"
+  .main-recipe-right.clearfix
+    = link_to "#{recipe.title}",recipe_path(recipe.id),class: "main-recipe-right__title"
+    .main-recipe-right__delete
+      = link_to "削除", recipe_path(recipe.id), method: :delete
+    .main-recipe-right__likes
+      = render partial: "likes/like", locals: { recipe: recipe }
+    .main-recipe-right__user
+      %p byたかし
+    .main-recipe-right__point
+      %p=recipe.point
+    .main-recipe-right__materials
+      %p ○材料
+      - recipe.materials.each do |material|
+        .main-recipe-right__materials-name
+          .each-materials
+            %p #{material.name}

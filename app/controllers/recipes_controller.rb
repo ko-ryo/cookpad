@@ -3,9 +3,9 @@ class RecipesController < ApplicationController
   before_action :move_to_index, except: :index
 
   def index
-    # @recipes = Recipe.all #元々は
     @recipes = Recipe.includes(:user).page(params[:page]).per(5).order("created_at DESC")
-    # binding.pry
+    # recipe =
+    # @like = Like.where(recipe_id: recipe.id, user_id: current_user.id)
   end
 
   def new
@@ -17,7 +17,6 @@ class RecipesController < ApplicationController
   def create
     @recipe = Recipe.new(recipe_params)
     @recipe.save
-    # binding.pry
     redirect_to root_path
   end
 
@@ -27,6 +26,11 @@ class RecipesController < ApplicationController
 
   def show
     @recipe = Recipe.find(params[:id])
+  end
+
+  def destroy
+    recipe = Recipe.find(params[:id])
+    recipe.destroy
   end
 
   private

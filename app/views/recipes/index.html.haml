@@ -30,7 +30,7 @@
   .main-recipes
     .main-recipes-info.clearfix
       .main-recipes-info__navi 絞り込み:<strong>すべて</strong>主食 おかず スープ お菓子 その他
-      = render partial: "recipe", collection: @recipes
+      = render partial: "recipe", collection: @recipes, as:"recipe"
       .main-recipes-info__page
       .main-recipes-info__page-next
 

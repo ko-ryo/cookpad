@@ -1,50 +1,26 @@
-/ .nav
-/   .nav-company-name
-/     = link_to "cookpad", recipes_path
-/   .nav-search
-/     = form_tag search_recipes_path, method: :get do |f|
-/       .nav-search-form
-/         %p レシピ検索
-/         = text_field_tag :title, params[:title], class: "search-form"
-/         = submit_tag '検索', :title => nil, class: "search-button"
-/   .nav-post
-/     - if user_signed_in?
-/       .nav-post-button
-/         = link_to "レシピを書く", new_recipe_path
-/   .nav-user
-/     .nav-user-button
-/       = link_to "設定", edit_user_registration_path
-/   - if user_signed_in?
-/     .nav-login
-/       %p ログイン中:#{current_user.name}
-/   - else
-/     .nav-login
-/       = link_to "新規登録", new_user_session_path
+.nav
+  .nav-company-name
+    = link_to "cookpad", recipes_path
+  .nav-search
+    = form_tag search_recipes_path, method: :get do |f|
+      .nav-search-form
+        %p レシピ検索
+        = text_field_tag :title, params[:title], class: "search-form"
+        = submit_tag '検索', :title => nil, class: "search-button"
+  .nav-post
+    - if user_signed_in?
+      .nav-post-button
+        = link_to "レシピを書く", new_recipe_path
+  .nav-user
+    .nav-user-button
+      = link_to "設定", edit_user_registration_path
+  - if user_signed_in?
+    .nav-login
+      %p ログイン中:#{current_user.name}
+  - else
+    .nav-login
+      = link_to "新規登録", new_user_session_path
 
-/ .side-bar.clearfix
-/   .side-bar-recipe
-/   .side-bar-premium
-
-/ .main.clearfix
-/   %p レシピ
-/   .main-recipes
-/     .main-recipes-info.clearfix
-/       .main-recipes-info__navi 絞り込み:<strong>すべて</strong>主食 おかず スープ お菓子 その他
-/       .main-recipes-info__page
-/       .main-recipes-info__page-next
-/     - @recipes.each do |recipe|
-/       .main-recipe.clearfix
-/         .main-recipe__image
-/           =image_tag recipe.image.to_s, size: "100x140"
-/         .main-recipe-right.clearfix
-/           =link_to "#{recipe.title}",recipe_path(recipe.id),class: "main-recipe-right__title"
-/           .main-recipe-right__user
-/             %p たかし
-/           .main-recipe-right__point
-/             %p=recipe.point
-/           .main-recipe-right__materials
-/             %p ○材料
-/             - recipe.materials.each do |material|
-/               .main-recipe-right__materials-name
-/                 .each-materials
-/                   %p #{material.name}
+.side-bar.clearfix
+  .side-bar-recipe
+  .side-bar-premium

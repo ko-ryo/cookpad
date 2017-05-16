@@ -19,24 +19,6 @@
                 %li
                   = m.text_area :name, row:1, placeholder: "（例）ジャガイモ"
                   = m.text_area :quantity, row:1, placeholder: "（例）１個"
-                / %li
-                /   = m.text_area :name, row:1, placeholder: "（例）にんじん"
-                /   = m.text_area :quantity, row:1, placeholder: "（例）１本"
-                / %li
-                /   = m.text_area :name, row:1, placeholder: "（例）玉ねぎ"
-                /   = m.text_area :quantity, row:1, placeholder: "（例）２個"
-                / %li
-                /   = m.text_area :name, row:1, placeholder: "（例）牛肉"
-                /   = m.text_area :quantity, row:1, placeholder: "（例）300g"
-                / %li
-                /   = m.text_area :name, row:1, placeholder: "（例）なす"
-                /   = m.text_area :quantity, row:1, placeholder: "（例）１本"
-                / %li
-                /   = m.text_area :name, row:1, placeholder: "（例）カレー粉"
-                /   = m.text_area :quantity, row:1, placeholder: "（例）１箱"
-                / %li
-                /   = m.text_area :name, row:1, placeholder: "（例）水"
-                /   = m.text_area :quantity, row:1, placeholder: "（例）１、５リットル"
       .new-recipe-form-bottom
         .recipe__steps
           .recipe__step
@@ -45,13 +27,4 @@
               = f.fields_for :steps, step do |s|
                 %li
                   = s.text_area :body, row:1, placeholder: "（例）まずはじめに、食材を適当な大きさに切ります。",class: "step-form"
-                / %li
-                /   %p 2,
-                /   = s.text_area :body, row:1, placeholder: "（例）次に、食材を茹でます。",class: "step-form"
-                / %li
-                /   %p 3,
-                /   = s.text_area :body, row:1, placeholder: "（例）食材が煮立ったら、カレー粉を入れます。",class: "step-form"
-                / %li
-                /   %p 4,
-                /   = s.text_area :body, row:1, placeholder: "（例）最後に盛り付けて完成です！お好みでソースをかけてね！",class: "step-form"
       = f.submit "レシピを投稿する",class: "submit-button"

@@ -29,7 +29,7 @@
   %p レシピ
   .main-recipes
     .main-recipes-info.clearfix
-      .main-recipes-info__navi 絞り込み:すべて 主食 おかず スープ お菓子 その他
+      .main-recipes-info__navi 絞り込み:<strong>すべて</strong>主食 おかず スープ お菓子 その他
       .main-recipes-info__page
       .main-recipes-info__page-next
     - @recipes.each do |recipe|
@@ -39,12 +39,12 @@
         .main-recipe-right.clearfix
           =link_to "#{recipe.title}",recipe_path(recipe.id),class: "main-recipe-right__title"
           .main-recipe-right__user
-            %p #{"by" + recipe.user.name}
+            %p たかし
           .main-recipe-right__point
             %p=recipe.point
           .main-recipe-right__materials
             %p ○材料
             - recipe.materials.each do |material|
-              .main-recipe-right__materials
+              .main-recipe-right__materials-name
                 .each-materials
                   %p #{material.name}

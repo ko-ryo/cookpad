@@ -4,8 +4,6 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.includes(:user).page(params[:page]).per(5).order("created_at DESC")
-    # recipe =
-    # @like = Like.where(recipe_id: recipe.id, user_id: current_user.id)
   end
 
   def new

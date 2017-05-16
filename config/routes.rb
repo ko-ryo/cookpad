@@ -6,8 +6,8 @@ Rails.application.routes.draw do
     collection do
       get 'search'
     end
-    resources :steps, except: [:destroy]
-    resources :materials, except: [:destroy]
+    resources :steps, only: [:index]
+    resources :materials, only: [:index]
     resources :likes, only: [:create, :destroy]
   end
 end

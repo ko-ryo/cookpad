@@ -14,7 +14,10 @@ set :ssh_options, auth_methods: ['publickey'],
 
 set :default_env, {
   "AWS_ACCESS_KEY_ID" => :ENV['AWS_ACCESS_KEY_ID'],
-  "AWS_SECRET_ACCESS_KEY" => :ENV['AWS_SECRET_ACCESS_KEY']
+  "AWS_SECRET_ACCESS_KEY" => :ENV['AWS_SECRET_ACCESS_KEY'],
+  "AWS_REGION" => :ENV['AWS_REGION'],
+  "AWS_S3_BUCKET" => :ENV['AWS_S3_BUCKET'],
+  "S3_ASSET_HOST" => :ENV['S3_ASSET_HOST']
 }
 
 set :linked_files, %w{.env}

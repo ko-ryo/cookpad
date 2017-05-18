@@ -1,5 +1,5 @@
-require 'dotenv'
-Dotenv.load
+require 'dotenv' unless Rails.env.production?
+Dotenv.load unless Rails.env.production?
 
 CarrierWave.configure do |config|
   config.fog_provider = 'fog'

@@ -1,10 +1,8 @@
 .user-page
   .user-page__pad
     .user-page__user-name
-      %p #{@user.name + "のページ"}
     .user-page__likes
       .user-page__likes__headline
-      %p #{@user.name + "のおすすめレシピ"}
       .user-page__likes__recipes
         - @favorite_recipes.each do |favorite_recipe|
           .user-page__likes__recipe

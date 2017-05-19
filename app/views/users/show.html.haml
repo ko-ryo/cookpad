@@ -5,5 +5,13 @@
     .user-page__likes
       .user-page__likes__headline
       %p #{@user.name + "のおすすめレシピ"}
-
+      .user-page__likes__recipes
+        - @favorite_recipes.each do |favorite_recipe|
+          .user-page__likes__recipe
+            .user-page__likes__recipe-title
+              = link_to "#{favorite_recipe.title}", recipe_path(favorite_recipe), method: :get
+            .user-page__likes__recipe-image
+              = image_tag favorite_recipe.image.to_s, size: "180x140"
+            .user-page__likes__recipe-catchcopy
+              %p #{favorite_recipe.point}
 

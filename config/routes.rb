@@ -10,5 +10,5 @@ Rails.application.routes.draw do
     resources :materials, only: [:index]
     resources :likes, only: [:create, :destroy]
   end
-  resources :users, only: [:show]
+  resources :users, only: [:show, :get_favorite_recipe_ids]
 end

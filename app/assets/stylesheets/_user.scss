@@ -1,138 +1,38 @@
-.account-page {
-  .account-page__inner {
-    width: 980px;
-    margin: 60px auto;
-    padding: 60px;
-    background-color: #fff;
-    border: 1px solid #D2B48C;
-    border-radius: 5px;
-
-    .account-page__inner--left, .account-page__inner--right {
-      float: left;
-      width: 50%;
-    }
-  }
-
-  .account-page__header {
-    h2 {
-      margin-bottom: 10px;
-      letter-spacing: 3px;
-      font-size: 40px;
-      font-weight: 200;
-
-      &:after {
-        content: '';
-        display: block;
-        width: 60px;
-        margin-top: 5px;
-        border-bottom: 1px solid #FF9933;
-      }
-    }
-
-    h5 {
-      margin-bottom: 20px;
-      font-size: 16px;
-      font-weight: 200;
-      color: #889b00;
-    }
-
-    .btn {
-      margin-top: 20px;
-      color: #fff;
-      background-color: #889b00;
-      font-size: 14px;
-    }
-  }
-
-  .field {
-    margin-bottom: 10px;
-
-    .field-label {
-      padding: 10px 0;
-      letter-spacing: 1px;
-      font-size: 14px;
-      font-weight: 200;
-
-      i {
-        font-size: 11px;
-      }
-    }
-
-    .field-input {
-      input {
-        width: 100%;
-        padding: 10px;
-        letter-spacing: 1px;
-      }
-    }
-  }
-
-  .btn {
-    display: inline-block;
-    height: 50px;
-    padding: 0 30px;
-    line-height: 50px;
-    letter-spacing: 1px;
-    text-align: center;
-    border: none;
-    border-radius: 2px;
-    background-color: #FF9933;
-  }
-
-  input[type='submit'] {
-    float: left;
-    margin-top: 20px;
-    color: #fff;
-    background-color: #FF9933;
-  }
-
-  .field-label {
-    .field_with_errors {
-      display: inline-block;
-      color: #d65f4c;
-      font-weight: 400;
-    }
-  }
-
-  .field-input {
-    .field_with_errors {
-      position: relative;
-
-      &:after {
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        width: 5px;
-        background-color: #d65f4c;
-      }
-    }
-  }
+.user-page{
+  height: 820px;
+  width: 640px;
+  background-color: #ffffff;
+  margin: 20px;
+  border: solid 1px #ded5c0;
+  border-radius: 5px
 }
 
-#error_explanation {
-  margin: 20px 0;
-  padding: 20px 30px;
-  border: 1px solid #ddd;
-  border-radius: 2px;
+.user-page__pad{
+  padding: 20px;
+}
 
-  h2 {
-    margin-bottom: 10px;
-    color: #d65f4c;
-    font-size: 14px;
-  }
+.user-page__likes__recipes{
+  padding-top: 10px;
+  width: 600px;
+}
 
-  ul {
-    margin: 0;
-    padding-left: 17px;
-    list-style: square;
-  }
+.user-page__likes__recipe{
+  width: 200px;
+  height: 300px;
+  background-color: gray;
+  float: left;
+}
 
-  li {
-    margin: 0;
-    padding: 0;
-    font-size: 13px;
-  }
+.user-page__likes__recipe-title{
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+
+.user-page__likes__recipe-image{
+  padding: 5px 10px;
+}
+
+.user-page__likes__recipe-catchcopy{
+  padding: 5px 10px;
 }

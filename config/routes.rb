@@ -10,4 +10,5 @@ Rails.application.routes.draw do
     resources :materials, only: [:index]
     resources :likes, only: [:create, :destroy]
   end
+  resources :users, only: [:show]
 end

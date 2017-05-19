@@ -3,7 +3,7 @@
     .each-recipe__title
       %p #{@recipe.title}
     .each-recipe__user
-      %p #{"by" + @recipe.user.name}
+      = link_to "#{"by" + @recipe.user.name}", user_path(@recipe.user.id), method: :get
     .each-recipe-upper
       .each-recipe-upper__image
         =image_tag @recipe.image.to_s, size: "280x400"

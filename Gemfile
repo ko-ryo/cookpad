@@ -39,14 +39,14 @@ gem 'devise'
 gem 'carrierwave'
 gem 'rmagick'
 gem 'fog'
-gem 'dotenv-rails'
+# gem 'dotenv-rails'
 group :production do
   gem 'unicorn'
 end
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  # gem 'dotenv-rails'
+  gem 'dotenv-rails'
   gem 'capistrano'
   gem 'capistrano-rbenv'
   gem 'capistrano-bundler'

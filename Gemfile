@@ -42,6 +42,7 @@ gem 'fog'
 # gem 'dotenv-rails'
 group :production do
   gem 'unicorn'
+  gem 'pry-remote'
 end
 
 group :development, :test do

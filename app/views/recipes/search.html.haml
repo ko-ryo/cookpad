@@ -33,3 +33,5 @@
       = render partial: "recipe", collection: @recipes, as:"recipe"
       .main-recipes-info__page
       .main-recipes-info__page-next
+  - if @recipes.length >= 5
+    = paginate @recipes

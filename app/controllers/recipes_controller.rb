@@ -19,7 +19,7 @@ class RecipesController < ApplicationController
   end
 
   def search
-    @recipes = Recipe.where('title LIKE(?)', "%#{params[:title]}%").limit(5)
+    @recipes = Recipe.where('title LIKE(?)', "%#{params[:title]}%").page(params[:page]).per(5)
   end
 
   def show

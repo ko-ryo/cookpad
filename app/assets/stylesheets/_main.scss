@@ -51,6 +51,7 @@
   margin-top: 12px;
   width: 40px;
   height: 20px;
+  a{color: inherit;}
 }
 
 .main-recipe-right__likes{
@@ -83,17 +84,18 @@
   float:left;
   font-size: 22px;
   overflow:hidden;
+  color : #889b00;
 }
 
 .main-recipe-right__user{
   float: left;
   margin-left: 25px;
   padding-top: 22px;
-  p{font-size: 12px;
-    color : #4d2200;
-    }
+  a{color: inherit;}
+  font-size: 12px;
   desplay:block;
 }
+
 .main-recipe-right__point{
   padding-top: 10px;
   padding-left: 40px;

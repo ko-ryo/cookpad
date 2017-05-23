@@ -16,10 +16,10 @@
       = link_to "設定", edit_user_registration_path
   - if user_signed_in?
     .nav-login
-      %p ログイン中:#{current_user.name}
+      = link_to "ログイン中:#{current_user.name}", user_path(current_user.id)
   - else
     .nav-login
-      = link_to "新規登録", new_user_session_path
+      = link_to "新規登録/ログイン", new_user_session_path
 
 .side-bar.clearfix
   .side-bar-recipe

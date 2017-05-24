@@ -1,6 +1,6 @@
 class RecipesController < ApplicationController
 
-  before_action :move_to_index, except: [:index,:show]
+  before_action :move_to_index, except: [:index,:show,:search]
 
   def index
     @recipes = Recipe.includes(:user).page(params[:page]).per(5).order("created_at DESC")

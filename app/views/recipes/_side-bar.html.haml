@@ -2,11 +2,11 @@
   .side-bar-ranking__frame
     .ranking__title
       %p 〜おすすめランキング〜
-    .single-item
       - @ranking_recipes.each.with_index(1) do |recipe,i|
-        .ranking-recipe__rank
-          %p #{i}位
-        .ranking-recipe__title
-          = link_to "#{recipe.title}",recipe_path(recipe.id)
-        .ranking-recipe__image
-          = image_tag recipe.image.to_s, size: "170x170"
+        = link_to(recipe_path(recipe.id), class: "single-item") do
+          .each-ranking-recipe
+            .ranking-recipe__rank
+              %p #{i}位
+            .ranking-recipe__title #{recipe.title}
+            .ranking-recipe__image
+              = image_tag recipe.image.to_s, size: "170x170"

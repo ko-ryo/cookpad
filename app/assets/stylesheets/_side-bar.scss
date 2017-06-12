@@ -17,7 +17,7 @@
 }
 
 .single-item{
-  padding-left: 10px;
+  padding-left: 25px;
 }
 .ranking__title p{
   text-align: center;
@@ -29,7 +29,9 @@
       font-weight: 500;
     }
 }
-
+.ranking-recipe__image img{
+  border-radius: 5px
+}
 
 .ranking-recipe__rank p{
   // padding-top: 20px;

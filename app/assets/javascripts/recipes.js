@@ -1,4 +1,4 @@
-// $(function(){
+$(function(){
 
 //   function buildHTML(recipe){
 //     var html = `
@@ -27,5 +27,5 @@
       // });
 //     });
 //   });
-// });
+});
 

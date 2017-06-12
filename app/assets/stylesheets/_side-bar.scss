@@ -6,3 +6,33 @@
   margin: 5px;
   border-radius: 5px;
 }
+
+.side-bar-ranking__frame{
+  padding: 20px 10px;
+
+}
+
+.ranking__title{
+  padding-bottom: 10px;
+}
+
+.single-item{
+  padding-left: 10px;
+}
+.ranking__title p{
+  text-align: center;
+  font-size: 18px;
+}
+.ranking-recipe__title{
+  a { font-size: 16px;
+      color : #4d2200;
+      font-weight: 500;
+    }
+}
+
+
+.ranking-recipe__rank p{
+  // padding-top: 20px;
+  font-size: 20px;
+  text-align: center;
+}

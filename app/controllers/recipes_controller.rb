@@ -4,6 +4,7 @@ class RecipesController < ApplicationController
 
   def index
     @recipes = Recipe.includes(:user).page(params[:page]).per(5).order("created_at DESC")
+    @ranking_recipes = Recipe.order("likes_count DESC").limit(3)
   end
 
   def new

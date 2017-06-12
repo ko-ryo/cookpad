@@ -1,0 +1,12 @@
+.side-bar-ranking
+  .side-bar-ranking__frame
+    .ranking__title
+      %p 〜おすすめランキング〜
+    .single-item
+      - @ranking_recipes.each.with_index(1) do |recipe,i|
+        .ranking-recipe__rank
+          %p #{i}位
+        .ranking-recipe__title
+          = link_to "#{recipe.title}",recipe_path(recipe.id)
+        .ranking-recipe__image
+          = image_tag recipe.image.to_s, size: "200x200"

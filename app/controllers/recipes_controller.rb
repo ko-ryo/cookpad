@@ -21,6 +21,7 @@ class RecipesController < ApplicationController
 
   def search
     @recipes = Recipe.where('title LIKE(?)', "%#{params[:title]}%").page(params[:page]).per(5)
+    @ranking_recipes = Recipe.order("likes_count DESC").limit(3)
   end
 
   def show
